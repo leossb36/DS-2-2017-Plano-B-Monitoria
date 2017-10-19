@@ -1,31 +1,42 @@
-<p id="notice"><%= notice %></p>
+<nav class="mainMenu">
+  <div class="contextMenu">
+      <a href="" id="servicesLeft">Serviços</a>
+      <a href="" id="whoLeft">Quem Somos?</a>
+    <div class="logoCenter"></div>
+      <a href="" id="budgetLeft">Orçamento Online</a>
+      <a href="" id="contactLeft">Fale Conosco</a>
+  </div>
+</nav>
 
-<h1>Users</h1>
+<body>
+<div class="container1">
+  <div class="container2">
+    <h1>Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.name %></td>
+              <td><%= user.email %></td>
+              <td><%= user.password %></td>
+              <td><%= link_to 'Show', user %></td>
+              <td><%= link_to 'Edit', edit_user_path(user) %></td>
+              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-default"><%= link_to 'New User', new_user_path %></button>
+  </div>
+</div>
+</body>
