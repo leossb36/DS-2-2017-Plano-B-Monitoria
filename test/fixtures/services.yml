@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_id: 
+  description: 
+  manager_id: 
+
+two:
+  service_id: 
+  description: 
+  manager_id: 
