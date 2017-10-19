@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  service_id: 1
+  adm_id: 1
+  budget_id: 1
+  price: 1.5
+  contracted: false
+
+two:
+  city: MyString
+  service_id: 1
+  adm_id: 1
+  budget_id: 1
+  price: 1.5
+  contracted: false

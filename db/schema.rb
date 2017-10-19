@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019012405) do
+ActiveRecord::Schema.define(version: 20171019014543) do
+
+  create_table "budgets", force: :cascade do |t|
+    t.string "city"
+    t.integer "service_id"
+    t.integer "adm_id"
+    t.integer "budget_id"
+    t.float "price"
+    t.boolean "contracted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "services", force: :cascade do |t|
     t.integer "adm_id"
