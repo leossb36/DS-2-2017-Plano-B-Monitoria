@@ -1,0 +1,2 @@
+class Orcamento < ApplicationRecord
+end
