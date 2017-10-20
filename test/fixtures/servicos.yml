@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  descricao: MyText
   servicoId_id: 1
+  descricao: MyText
 
 two:
-  descricao: MyText
   servicoId_id: 1
+  descricao: MyText

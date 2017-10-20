@@ -5,7 +5,6 @@ class CreateOrcamentos < ActiveRecord::Migration[5.1]
       t.string :cidade
       t.float :preco
       t.boolean :contratado
-      add_foreign_key :Orcamentos, :Servicos
 
       t.timestamps
     end
