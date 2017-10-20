@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  orcamentoId_id: 1
   cidade: MyString
-  preco: 1.5
+  preço: 9.99
   contratado: false
 
 two:
-  orcamentoId_id: 1
   cidade: MyString
-  preco: 1.5
+  preço: 9.99
   contratado: false
