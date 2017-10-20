@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cidade: MyString
   orcamentoId_id: 1
+  cidade: MyString
   preco: 1.5
   contratado: false
 
 two:
-  cidade: MyString
   orcamentoId_id: 1
+  cidade: MyString
   preco: 1.5
   contratado: false

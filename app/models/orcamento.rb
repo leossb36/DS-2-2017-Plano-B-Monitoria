@@ -1,2 +1,3 @@
-class Orcamento < ApplicationRecord
+class Orcamento < ActiveRecord::Base
+	belongs_to :Servico
 end

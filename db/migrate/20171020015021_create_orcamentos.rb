@@ -1,10 +1,11 @@
 class CreateOrcamentos < ActiveRecord::Migration[5.1]
   def change
     create_table :orcamentos do |t|
-      t.string :cidade
       t.integer :orcamentoId_id
+      t.string :cidade
       t.float :preco
       t.boolean :contratado
+      add_foreign_key :Orcamentos, :Servicos
 
       t.timestamps
     end

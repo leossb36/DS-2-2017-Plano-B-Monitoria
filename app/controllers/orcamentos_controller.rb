@@ -69,6 +69,6 @@ class OrcamentosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def orcamento_params
-      params.require(:orcamento).permit(:cidade, :orcamentoId_id, :preco, :contratado)
+      params.require(:orcamento).permit(:orcamentoId_id, :cidade, :preco, :contratado, :servicoId_id)
     end
 end
