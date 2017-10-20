@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @orcamento.cidade %>
+</p>
+
+<p>
+  <strong>Orcamentoid:</strong>
+  <%= @orcamento.orcamentoId_id %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @orcamento.preco %>
+</p>
+
+<p>
+  <strong>Contratado:</strong>
+  <%= @orcamento.contratado %>
+</p>
+
+<%= link_to 'Edit', edit_orcamento_path(@orcamento) %> |
+<%= link_to 'Back', orcamentos_path %>
