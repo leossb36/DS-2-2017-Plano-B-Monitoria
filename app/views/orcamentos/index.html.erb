@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orcamentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cidade</th>
+      <th>Preço</th>
+      <th>Contratado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orcamentos.each do |orcamento| %>
+      <tr>
+        <td><%= orcamento.cidade %></td>
+        <td><%= orcamento.preço %></td>
+        <td><%= orcamento.contratado %></td>
+        <td><%= link_to 'Show', orcamento %></td>
+        <td><%= link_to 'Edit', edit_orcamento_path(orcamento) %></td>
+        <td><%= link_to 'Destroy', orcamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orcamento', new_orcamento_path %>
