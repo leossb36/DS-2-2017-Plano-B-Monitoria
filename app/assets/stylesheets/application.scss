@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body {
-  background-color: #BBF9C4;
+  background-color: #317B22;
 }
 
 #planob_service {
@@ -22,7 +22,7 @@ body {
 }
 
 #budget_card {
-  border: 0;  
+  border: 0;
 }
 
 #who_card {
@@ -38,16 +38,16 @@ body {
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
   box-shadow: 0 0.2em 2em #262626;
-  
+}
 
+.alignBody {
+  margin-top: 180px;
 }
 
 .row {
-  margin: auto; 
+  margin: auto;
 }
 
 #no_margin {
   margin: 0;
 }
-
-

@@ -3,18 +3,20 @@
   <head>
     <title>Plano B Monitoria</title>
     <%= csrf_meta_tags %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <div id = "wrapper">
-     <div class = "header">
-       <%= render template = "/layouts/navbar" %>
-     </div>
-   </div>
+    <div class="alignBody">
+      <div id = "wrapper">
+        <div class = "header">
+          <%= render template = "/layouts/navbar" %>
+        </div>
+      </div>
+    </div>
   </body>
- 
+
   <%= yield %>
 </html>
