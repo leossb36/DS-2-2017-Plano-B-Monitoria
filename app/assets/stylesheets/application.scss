@@ -1,0 +1,53 @@
+@import "bootstrap";
+
+body {
+  background-color: #317B22;
+}
+
+#planob_service {
+
+
+}
+
+#planob_budget {
+  margin-right: 1em;
+}
+
+#planob_who {
+  margin-left: 1em;
+}
+
+#service_card {
+  border: 0;
+}
+
+#budget_card {
+  border: 0;
+}
+
+#who_card {
+  border: 0;
+}
+
+#contact_card {
+  border: 0;
+}
+
+#planob_bar {
+  background: rgba(250,250,250,250) !important;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  box-shadow: 0 0.2em 2em #262626;
+}
+
+.alignBody {
+  margin-top: 180px;
+}
+
+.row {
+  margin: auto;
+}
+
+#no_margin {
+  margin: 0;
+}

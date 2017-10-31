@@ -1,6 +1,16 @@
-<h1>Editing Servico</h1>
 
-<%= render 'form', servico: @servico %>
+<div class="container-fluid" style="margin-left: 13%;">
+  <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white; width: 70%;">
 
-<%= link_to 'Show', @servico %> |
-<%= link_to 'Back', servicos_path %>
+    <div class="card-header" style="text-align: center">
+      <h1 style="font-size:150%">Editar Serviço</h1>
+    </div>
+
+    <div class="card">
+      <div class="card-block" style="margin: 2%;">
+        <%= render 'form', servico: @servico %>
+      </div>
+    </div>
+
+  </div>
+</div>

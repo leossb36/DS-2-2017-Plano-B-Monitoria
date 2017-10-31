@@ -11,22 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :cidade %>
-    <%= form.text_field :cidade, id: :orcamento_cidade %>
+  <div class="form-group row">
+    <label class="col-2 col-form-label"><%= form.label :cidade %></label>
+    <div class="col-10">
+      <%= form.text_field :cidade, id: :orcamento_cidade %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :preço %>
-    <%= form.text_field :preço, id: :orcamento_preço %>
+  <div class="form-group row">
+    <label class="col-2 col-form-label"><%= form.label :preço %></label>
+    <div class="col-10">
+      <%= form.text_field :preço, id: :orcamento_preço %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :contratado %>
-    <%= form.check_box :contratado, id: :orcamento_contratado %>
+  <div class="form-check">
+    <label class="form-check-label">
+      <%= form.check_box :contratado, id: :orcamento_contratado %>
+      <label class="col-2 col-form-label"><%= form.label :contratado %></label>
+    </label>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" style="text-align: right;">
+    <%= form.submit class: "btn btn-primary" %>
+    <a href= "<%= orcamentos_path %>" class= "btn btn-secondary" >Voltar</a>
   </div>
 <% end %>
