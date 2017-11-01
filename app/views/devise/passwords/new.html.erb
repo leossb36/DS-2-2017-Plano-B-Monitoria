@@ -1,0 +1,33 @@
+
+
+<div class="container-fluid" style="margin-left: 13%;">
+  <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white; width: 40%; margin-left: 15%;  -webkit-box-shadow: 10px 10px 40px #000;
+        box-shadow: 0 0 60px #000;">
+
+    <div class="card-header" style="text-align: center">
+      <h1 style="font-size:150%">Esqueci minha senha</h1>
+    </div>
+
+    <div class="card">
+      <div class="card-block" style="margin: 2%; text-align: center">
+
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+        <br />
+        <div class="actions">
+          <%= f.submit "Desejo restaurar minha senha", class: "btn btn-primary" %>
+        </div>
+        <% end %>
+        <br />
+        <%= render "devise/shared/links" %>
+
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
