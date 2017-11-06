@@ -28,6 +28,8 @@ class OrcamentosController < ApplicationController
 
     respond_to do |format|
       if @orcamento.save
+        # Tell the UserMailer to send a welcome email after save
+        OrcamentoMailer.welcome_email(@user).deliver_later
         format.html { redirect_to @orcamento, notice: 'Orcamento was successfully created.' }
         format.json { render :show, status: :created, location: @orcamento }
       else
