@@ -1,22 +1,14 @@
-<div class="container-fluid" style="margin-left: 13%;">
-  <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white; width: 70%;">
+<p id="notice"><%= notice %></p>
 
-    <div class="card-header" style="text-align: center">
-      <h1 style="font-size:150%">Mostrar Serviço</h1>
-    </div>
+<p>
+  <strong>Nome:</strong>
+  <%= @servico.Nome %>
+</p>
 
-    <div class="card">
-      <div class="card-block" style="margin: 2%;">
-        <p id="notice"><%= notice %></p>
-        <p>
-          <strong>Descrição:</strong>
-          <%= @servico.descrição %>
-        </p>
-        <div style="text-align: right;">
-          <a href= "<%= edit_servico_path(@servico) %>" class= "btn btn-info" >Editar</a>
-          <a href= "<%= servicos_path %>" class= "btn btn-secondary" >Voltar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<p>
+  <strong>Descrição:</strong>
+  <%= @servico.Descrição %>
+</p>
+
+<%= link_to 'Edit', edit_servico_path(@servico) %> |
+<%= link_to 'Back', servicos_path %>

@@ -18,6 +18,35 @@
     </div>
   </div>
 
+  <!-- <div class="form-group row">
+    <label class="col-2 col-form-label"><%= form.label :nome %></label>
+    <div class="col-10">
+      <select name="servico_id" class="form-control" id=" servico_id">
+          <option value="" selected disabled>UF</option>
+          <option value="servicos">s1</option>
+          <option value="servicos">s2</option>
+      </select>
+    </div>
+  </div> -->
+
+  <%= form_for @orcamento do |f| %>
+
+  <!-- contract fields -->
+
+  Servicos:
+  <ul>
+    <%= f.fields_for :servico do |servicos_form| %>
+      <li>
+        <%= servicos_form.label :Nome %>
+        <%= servicos_form.text_field :Nome %>
+
+        <!-- Any other addendum attributes -->
+
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
   <div class="form-group row">
     <label class="col-2 col-form-label"><%= form.label :preço %></label>
     <div class="col-10">

@@ -17,7 +17,7 @@ class ServicosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create servico" do
     assert_difference('Servico.count') do
-      post servicos_url, params: { servico: { descrição: @servico.descrição } }
+      post servicos_url, params: { servico: { Descrição: @servico.Descrição, Nome: @servico.Nome } }
     end
 
     assert_redirected_to servico_url(Servico.last)
@@ -34,7 +34,7 @@ class ServicosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update servico" do
-    patch servico_url(@servico), params: { servico: { descrição: @servico.descrição } }
+    patch servico_url(@servico), params: { servico: { Descrição: @servico.Descrição, Nome: @servico.Nome } }
     assert_redirected_to servico_url(@servico)
   end
 
