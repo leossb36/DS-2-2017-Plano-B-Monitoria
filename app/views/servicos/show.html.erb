@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Nome:</strong>
-  <%= @servico.Nome %>
+  <%= @servico.nome %>
 </p>
 
 <p>
   <strong>Descrição:</strong>
-  <%= @servico.Descrição %>
+  <%= @servico.descricao %>
+</p>
+
+<p>
+  <strong>Preço:</strong>
+  <%= @servico.preco %>
 </p>
 
 <%= link_to 'Edit', edit_servico_path(@servico) %> |
-<%= link_to 'Back', servicos_path %>
+<%= link_to 'Back', servicos_path %> -->
+<%= @servico.nome %>
+<% for orcamento in @servico.orcamentos %>
+<%= orcamento.nome %>
+<% end %>

@@ -1,6 +1,29 @@
-<h1>Editing Servico</h1>
+<!-- <h1>Editing Servico</h1>
 
 <%= render 'form', servico: @servico %>
 
 <%= link_to 'Show', @servico %> |
-<%= link_to 'Back', servicos_path %>
+<%= link_to 'Back', servicos_path %> -->
+<h1>Editar Serviço</h1>
+<%= form_for @servico do |f| %>
+  <p>
+    Nome: <%= f.text_field :nome %>
+  </p>
+  <p>
+    Descrição: <%= f.text_area :descricao %>
+  </p>
+  <p>
+    Preço: <%= f.text_field :preco %>
+  </p>
+  <%= f.fields_for :orcamentos do |orcamento_form| %>
+    <p>
+      Orcamento:
+      <%= orcamento_form.text_field :cidade %>
+      <%= orcamento_form.check_box :_destroy %>
+      <%= orcamento_form.label :_destroy, "Remover Orçamento" %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.submit 'Atualizar Serviço' %>
+  </p>
+<% end %>

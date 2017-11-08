@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Servicos</h1>
 
@@ -7,6 +7,7 @@
     <tr>
       <th>Nome</th>
       <th>Descrição</th>
+      <th>Preço</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +15,9 @@
   <tbody>
     <% @servicos.each do |servico| %>
       <tr>
-        <td><%= servico.Nome %></td>
-        <td><%= servico.Descrição %></td>
+        <td><%= servico.nome %></td>
+        <td><%= servico.descricao %></td>
+        <td><%= servico.preco %></td>
         <td><%= link_to 'Show', servico %></td>
         <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
         <td><%= link_to 'Destroy', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +28,13 @@
 
 <br>
 
-<%= link_to 'New Servico', new_servico_path %>
+<%= link_to 'New Servico', new_servico_path %> -->
+
+<h1>Serviços</h1>
+
+<% for servico in @servicos %>
+  <%= servico.nome %>
+  <% for orcamento in servico.orcamentos %>
+    <%= orcamento.cidade %>
+  <% end %>
+<% end %>

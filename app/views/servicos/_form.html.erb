@@ -1,4 +1,4 @@
-<%= form_with(model: servico, local: true) do |form| %>
+<!-- <%= form_with(model: servico, local: true) do |form| %>
   <% if servico.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
@@ -12,16 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Nome %>
-    <%= form.text_field :Nome, id: :servico_Nome %>
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :servico_nome %>
   </div>
 
   <div class="field">
-    <%= form.label :Descrição %>
-    <%= form.text_area :Descrição, id: :servico_Descrição %>
+    <%= form.label :descrição %>
+    <%= form.text_area :descrição, id: :servico_descrição %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preço %>
+    <%= form.text_field :preço, id: :servico_preço %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %> -->
+
+<h1>Novo serviço</h1>
+<%= form_for @servico do |f| %>
+  <p>
+    Nome: <%= f.text_field :nome %>
+  </p>
+  <p>
+    Descrição: <%= f.text_area :descricao %>
+  </p>
+  <p>
+    Preço: <%= f.text_field :preco %>
+  </p>
+  <p>
+    <%= f.submit 'Criar Serviço' %>
+  </p>
 <% end %>

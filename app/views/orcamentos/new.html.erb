@@ -1,15 +1,5 @@
-<div class="container-fluid" style="margin-left: 13%;">
-  <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white; width: 70%;">
+<h1>New Orcamento</h1>
 
-    <div class="card-header" style="text-align: center">
-      <h1 style="font-size:150%">Realizar Orçamento</h1>
-    </div>
+<%= render 'form', orcamento: @orcamento %>
 
-    <div class="card">
-      <div class="card-block" style="margin: 2%;">
-        <%= render 'form', orcamento: @orcamento %>
-      </div>
-    </div>
-
-  </div>
-</div>
+<%= link_to 'Back', orcamentos_path %>

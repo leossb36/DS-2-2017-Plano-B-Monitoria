@@ -17,7 +17,7 @@ class OrcamentosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create orcamento" do
     assert_difference('Orcamento.count') do
-      post orcamentos_url, params: { orcamento: { cidade: @orcamento.cidade, contratado: @orcamento.contratado, preço: @orcamento.preço } }
+      post orcamentos_url, params: { orcamento: { cidade: @orcamento.cidade, servico_id: @orcamento.servico_id } }
     end
 
     assert_redirected_to orcamento_url(Orcamento.last)
@@ -34,7 +34,7 @@ class OrcamentosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update orcamento" do
-    patch orcamento_url(@orcamento), params: { orcamento: { cidade: @orcamento.cidade, contratado: @orcamento.contratado, preço: @orcamento.preço } }
+    patch orcamento_url(@orcamento), params: { orcamento: { cidade: @orcamento.cidade, servico_id: @orcamento.servico_id } }
     assert_redirected_to orcamento_url(@orcamento)
   end
 

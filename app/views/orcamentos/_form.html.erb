@@ -11,58 +11,17 @@
     </div>
   <% end %>
 
-  <div class="form-group row">
-    <label class="col-2 col-form-label"><%= form.label :cidade %></label>
-    <div class="col-10">
-      <%= form.text_field :cidade, id: :orcamento_cidade %>
-    </div>
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade, id: :orcamento_cidade %>
   </div>
 
-  <!-- <div class="form-group row">
-    <label class="col-2 col-form-label"><%= form.label :nome %></label>
-    <div class="col-10">
-      <select name="servico_id" class="form-control" id=" servico_id">
-          <option value="" selected disabled>UF</option>
-          <option value="servicos">s1</option>
-          <option value="servicos">s2</option>
-      </select>
-    </div>
-  </div> -->
-
-  <%= form_for @orcamento do |f| %>
-
-  <!-- contract fields -->
-
-  Servicos:
-  <ul>
-    <%= f.fields_for :servico do |servicos_form| %>
-      <li>
-        <%= servicos_form.label :Nome %>
-        <%= servicos_form.text_field :Nome %>
-
-        <!-- Any other addendum attributes -->
-
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-  <div class="form-group row">
-    <label class="col-2 col-form-label"><%= form.label :preço %></label>
-    <div class="col-10">
-      <%= form.text_field :preço, id: :orcamento_preço %>
-    </div>
+  <div class="field">
+    <%= form.label :servico_id %>
+    <%= form.number_field :servico_id, id: :orcamento_servico_id %>
   </div>
 
-  <div class="form-check">
-    <label class="form-check-label">
-      <%= form.check_box :contratado, id: :orcamento_contratado %>
-      <label class="col-2 col-form-label"><%= form.label :contratado %></label>
-    </label>
-  </div>
-
-  <div class="actions" style="text-align: right;">
-    <%= form.submit class: "btn btn-primary" %>
-    <a href= "<%= orcamentos_path %>" class= "btn btn-secondary" >Voltar</a>
+  <div class="actions">
+    <%= form.submit %>
   </div>
 <% end %>
