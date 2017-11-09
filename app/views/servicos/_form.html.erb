@@ -1,48 +1,28 @@
-<!-- <%= form_with(model: servico, local: true) do |form| %>
-  <% if servico.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
+<%= render 'shared/errors', object: @servico %>
 
-      <ul>
-      <% servico.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome, id: :servico_nome %>
-  </div>
-
-  <div class="field">
-    <%= form.label :descrição %>
-    <%= form.text_area :descrição, id: :servico_descrição %>
-  </div>
-
-  <div class="field">
-    <%= form.label :preço %>
-    <%= form.text_field :preço, id: :servico_preço %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %> -->
-
-<h1>Novo serviço</h1>
 <%= form_for @servico do |f| %>
-  <p>
-    Nome: <%= f.text_field :nome %>
-  </p>
-  <p>
-    Descrição: <%= f.text_area :descricao %>
-  </p>
-  <p>
-    Preço: <%= f.text_field :preco %>
-  </p>
-  <p>
-    <%= f.submit 'Criar Serviço' %>
-  </p>
+  <div>
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div>
+    <%= f.label :descricao %>
+    <%= f.text_area :descricao %>
+  </div>
+
+  <div>
+    <%= f.label :preco %>
+    <%= f.text_field :preco %>
+  </div>
+
+  <!-- <%= f.fields_for :orcamentos do |orcamento| %>
+     <div>
+       <%= orcamento.label :cidade %>
+       <%= orcamento.text_field :cidade %>
+     </div>
+   <% end %>
+ </div> -->
+
+  <%= f.submit %>
 <% end %>

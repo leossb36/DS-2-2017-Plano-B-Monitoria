@@ -1,0 +1,13 @@
+<li>
+  <strong><%= orcamento.cidade %></strong><br>
+  <% if servico.orcamento.any? %>
+    Orçamentos:
+    <ul>
+      <% orcamento.servicos.each do |servico| %>
+        <li>
+          <%= servico.nome %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</li>

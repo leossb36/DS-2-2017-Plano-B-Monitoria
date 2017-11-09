@@ -2,10 +2,12 @@
 
 one:
   nome: MyString
-  descrição: MyText
-  preço: 
+  descricao: MyText
+  preco: 9.99
+  orcamento: one
 
 two:
   nome: MyString
-  descrição: MyText
-  preço: 
+  descricao: MyText
+  preco: 9.99
+  orcamento: two
