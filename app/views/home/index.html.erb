@@ -38,8 +38,21 @@
         <div class = "card">
          <div class = "card-body">
            <div class = "card-text">
-              Nam non efficitur risus, a gravida libero. Vivamus porttitor ipsum libero, a condimentum arcu elementum eu. Sed accumsan placerat ipsum ac aliquam. Morbi feugiat ex at convallis fermentum. Duis tempus tempor leo a laoreet. Ut mattis semper laoreet. Suspendisse ac laoreet nunc, id ornare velit. Aenean mattis lacinia lorem a ultrices. Pellentesque tincidunt vehicula orci ac aliquet. Proin semper tempor ex nec cursus. Curabitur faucibus vehicula mattis. Ut lectus ex, porttitor id tortor at, dapibus vehicula nibh. Maecenas eu varius ligula, ac ultricies nulla. Integer quam purus, dignissim id varius at, dapibus vel augue. Phasellus condimentum pharetra justo, sed sagittis turpis finibus sit amet."       
-              Nam non efficitur risus, a gravida libero. Vivamus porttitor ipsum libero, a condimentum arcu elementum eu. Sed accumsan placerat ipsum ac aliquam. Morbi feugiat ex at convallis fermentum. Duis tempus tempor leo a laoreet. Ut mattis semper laoreet. Suspendisse ac laoreet nunc, id ornare velit. Aenean mattis lacinia lorem a ultrices. Pellentesque tincidunt vehicula orci ac aliquet. Proin semper tempor ex nec cursus. Curabitur faucibus vehicula mattis. Ut lectus ex, porttitor id tortor at, dapibus vehicula nibh. Maecenas eu varius ligula, ac ultricies nulla. Integer quam purus, dignissim id varius at, dapibus vel augue. Phasellus condimentum pharetra justo, sed sagittis turpis finibus sit amet."       
+
+            <%= form_for(:user, :url => session_path(:user)) do |f| %>
+            <%= f.text_field :email %>
+            <%= f.password_field :password %>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+            <%= f.submit 'Sign in' %>
+            <%= link_to "Forgot your password?", new_password_path(:user) %>
+              <% if current_user.present?
+                print "teste"
+      
+                else 
+                print "Não foi man"
+                end                
+              %>                    
            </div>
          </div> 
         </div>
