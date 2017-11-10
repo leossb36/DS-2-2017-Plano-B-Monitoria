@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :orcamentos
   resources :servicos
+  resources :faleconosco
   root 'home#index'
   get 'home/index'
 
