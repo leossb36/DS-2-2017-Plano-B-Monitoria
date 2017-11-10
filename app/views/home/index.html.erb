@@ -46,13 +46,8 @@
             <%= f.label :remember_me %>
             <%= f.submit 'Sign in' %>
             <%= link_to "Forgot your password?", new_password_path(:user) %>
-              <% if current_user.present?
-                print "teste"
-      
-                else 
-                print "Não foi man"
-                end                
-              %>                    
+            <% end %>
+                    
            </div>
          </div> 
         </div>
