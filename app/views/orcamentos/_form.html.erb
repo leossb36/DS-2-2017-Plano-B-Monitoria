@@ -6,13 +6,12 @@
     <%= f.text_field :cidade %>
   </div>
 
-  <%= f.fields_for :servicos do |servico| %>
-     <div>
-       <%= servico.label :nome_do_servico %>
-       <%= servico.text_field :nome %>
-     </div>
-   <% end %>
- </div>
+    <%= f.fields_for :servicos do |servico| %>
+      <div>
+        <%= servico.label :nome_do_serviço %>
+        <%= servico.text_field :nome %>
+      </div>
+    <% end %>
 
   <%= f.submit %>
 <% end %>

@@ -5,7 +5,7 @@ class OrcamentosController < ApplicationController
 
   def new
     @orcamento = Orcamento.new
-    # 1.times { @orcamento.servicos.build}
+    1.times { @orcamento.servicos.build}
   end
 
   def create
@@ -20,6 +20,6 @@ class OrcamentosController < ApplicationController
   private
 
   def orcamento_params
-    params.require(:orcamento).permit(:cidade, servicos_attributes: [:id, :nome, :descricao ,:preco])
+    params.require(:orcamento).permit(:cidade, servicos_attributes: [:id, :nome, :descricao, :preco])
   end
 end

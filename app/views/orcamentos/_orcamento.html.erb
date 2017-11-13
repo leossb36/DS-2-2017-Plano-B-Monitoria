@@ -1,6 +1,6 @@
 <li>
   <strong><%= orcamento.cidade %></strong><br>
-  <% if servico.orcamento.any? %>
+  <% if orcamento.servicos.any? %>
     Orçamentos:
     <ul>
       <% orcamento.servicos.each do |servico| %>
