@@ -9,7 +9,7 @@
     <%= f.fields_for :servicos do |servico| %>
       <div>
         <%= servico.label :nome_do_serviço %>
-        <%= servico.text_field :nome %>
+        <%= servico.collection_select(:orcamento_id, Servico.all, :id, :nome) %>
       </div>
     <% end %>
 
