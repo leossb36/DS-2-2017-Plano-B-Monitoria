@@ -4,10 +4,8 @@ one:
   nome: MyString
   descricao: MyText
   preco: 9.99
-  orcamento: one
 
 two:
   nome: MyString
   descricao: MyText
   preco: 9.99
-  orcamento: two

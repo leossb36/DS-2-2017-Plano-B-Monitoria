@@ -1,20 +1,32 @@
-<%= render 'shared/errors', object: @servico %>
+<%= form_with(model: servico, local: true) do |form| %>
+  <% if servico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
 
-<%= form_for @servico do |f| %>
-  <div>
-    <%= f.label :nome %>
-    <%= f.text_field :nome %>
+      <ul>
+      <% servico.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :servico_nome %>
   </div>
 
-  <div>
-    <%= f.label :descricao %>
-    <%= f.text_area :descricao %>
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao, id: :servico_descricao %>
   </div>
 
-  <div>
-    <%= f.label :preco %>
-    <%= f.text_field :preco %>
+  <div class="field">
+    <%= form.label :preco %>
+    <%= form.text_field :preco, id: :servico_preco %>
   </div>
 
-  <%= f.submit %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

@@ -1,5 +1,31 @@
-<h1>Serviço</h1>
+<p id="notice"><%= notice %></p>
 
-<p><%= link_to 'Add servico', new_servico_path %></p>
+<h1>Servicos</h1>
 
-<ul><%= render @servicos %></ul>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servicos.each do |servico| %>
+      <tr>
+        <td><%= servico.nome %></td>
+        <td><%= servico.descricao %></td>
+        <td><%= servico.preco %></td>
+        <td><%= link_to 'Show', servico %></td>
+        <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
+        <td><%= link_to 'Destroy', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Servico', new_servico_path %>

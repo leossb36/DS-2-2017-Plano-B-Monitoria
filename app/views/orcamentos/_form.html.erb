@@ -1,17 +1,27 @@
-<%= render 'shared/errors', object: @orcamento %>
+<%= form_with(model: orcamento, local: true) do |form| %>
+  <% if orcamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orcamento.errors.count, "error") %> prohibited this orcamento from being saved:</h2>
 
-<%= form_for @orcamento do |f| %>
-  <div>
-    <%= f.label :cidade %>
-    <%= f.text_field :cidade %>
+      <ul>
+      <% orcamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade, id: :orcamento_cidade %>
   </div>
 
-    <%= f.fields_for :servicos do |servico| %>
-      <div>
-        <%= servico.label :nome_do_serviço %>
-        <%= servico.collection_select(:orcamento_id, Servico.all, :id, :nome) %>
-      </div>
-    <% end %>
+  <div>
+    <%= form.label :nome_do_serviço %>
+    <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
+  </div>
 
-  <%= f.submit %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

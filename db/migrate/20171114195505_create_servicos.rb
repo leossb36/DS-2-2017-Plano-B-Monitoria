@@ -4,7 +4,6 @@ class CreateServicos < ActiveRecord::Migration[5.1]
       t.string :nome
       t.text :descricao
       t.decimal :preco
-      t.belongs_to :orcamento, foreign_key: true
 
       t.timestamps
     end
