@@ -2,10 +2,6 @@
 
 one:
   cidade: MyString
-  preço: 9.99
-  contratado: false
 
 two:
   cidade: MyString
-  preço: 9.99
-  contratado: false

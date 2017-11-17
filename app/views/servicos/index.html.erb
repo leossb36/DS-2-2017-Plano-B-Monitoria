@@ -1,44 +1,31 @@
-<div class="container-fluid" style="margin-left: 13%;">
-  <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white; width: 70%;">
+<p id="notice"><%= notice %></p>
 
-    <div class="card-header" style="text-align: center">
-      <h1 style="font-size:150%">Serviços</h1>
-    </div>
+<h1>Servicos</h1>
 
-    <div class="card">
-      <div class="card-block" style="margin: 2%; text-align: right;">
-        <table>
-        <p id="notice"><%= notice %></p>
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th colspan="3"></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-          <tbody>
-            <% @servicos.each do |servico| %>
-              <tr>
-                <td><%= servico.descrição %></td>
-                <td>
-                  <div class="listButtons" style="text-align: right">
-                    <div class="btn-group" role="group" aria-label="...">
-                      <td><%= link_to 'Detalhes', servico , class: "btn btn-primary btn-sm" %></td>
-                      <td><%= link_to 'Editar', edit_servico_path(servico) , class: "btn btn-info btn-sm" %></td>
-                      <td><%= link_to 'Excluir', servico, method: :delete, class: "btn btn-danger btn-sm", data: { confirm: 'Você tem certeza?' } %></td>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+  <tbody>
+    <% @servicos.each do |servico| %>
+      <tr>
+        <td><%= servico.nome %></td>
+        <td><%= servico.descricao %></td>
+        <td><%= servico.preco %></td>
+        <td><%= link_to 'Show', servico %></td>
+        <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
+        <td><%= link_to 'Destroy', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
+<br>
 
-            <% end %>
-          </tbody>
-        </table>
-        <%= link_to 'Novo Servico', new_servico_path , class: "btn btn-primary" %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= link_to 'New Servico', new_servico_path %>

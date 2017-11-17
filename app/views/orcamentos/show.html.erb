@@ -1,32 +1,13 @@
-<div class="container-fluid" style="margin-left: 13%;">
-  <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white; width: 70%;">
+<p id="notice"><%= notice %></p>
 
-    <div class="card-header" style="text-align: center">
-      <h1 style="font-size:150%">Mostrar Orçamento</h1>
-    </div>
+<p>
+  <strong>Cidade:</strong>
+  <%= @orcamento.cidade %>
+</p>
+<p>
+  <strong>Preço:</strong>
+  <%= @orcamento.preco %>
+</p>
 
-    <div class="card">
-      <div class="card-block" style="margin: 2%;">
-        <p id="notice"><%= notice %></p>
-        <p>
-          <strong>Cidade:</strong>
-          <%= @orcamento.cidade %>
-        </p>
-
-        <p>
-          <strong>Preço:</strong>
-          <%= @orcamento.preço %>
-        </p>
-
-        <p>
-          <strong>Contratado:</strong>
-          <%= @orcamento.contratado %>
-        </p>
-        <div style="text-align: right;">
-          <a href= "<%= edit_orcamento_path(@orcamento) %>" class= "btn btn-info">Editar</a>
-          <a href= "<%= orcamentos_path %>" class= "btn btn-secondary">Voltar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= link_to 'Edit', edit_orcamento_path(@orcamento) %> |
+<%= link_to 'Back', orcamentos_path %>

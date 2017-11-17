@@ -1,4 +1,4 @@
-<%= form_with(model: servico, local: true ) do |form| %>
+<%= form_with(model: servico, local: true) do |form| %>
   <% if servico.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
@@ -11,17 +11,22 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <div class="row">
-      <div class="col-md-12">
-        <%= form.label :descrição %>
-        <%= form.text_area :descrição, id: :servico_descrição , class: "form-control" %>
-      </div>
-    </div>
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :servico_nome %>
   </div>
 
-  <div class="actions" style="text-align: right;">
-    <a href= "<%= servicos_path %>" class= "btn btn-secondary" >Voltar</a>
-    <%= form.submit class: "btn btn-primary" %>
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao, id: :servico_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preco %>
+    <%= form.text_field :preco, id: :servico_preco %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
   </div>
 <% end %>

@@ -11,29 +11,32 @@
     </div>
   <% end %>
 
-  <div class="form-group row">
-    <label class="col-2 col-form-label"><%= form.label :cidade %></label>
-    <div class="col-10">
-      <%= form.text_field :cidade, id: :orcamento_cidade %>
-    </div>
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Taguatinga','Taguatinga'],
+    ['Santa Maria','Santa Maria']], params[:cidade]), {}, {:id=>"cidade_id"} %>
   </div>
 
-  <div class="form-group row">
-    <label class="col-2 col-form-label"><%= form.label :preço %></label>
-    <div class="col-10">
-      <%= form.text_field :preço, id: :orcamento_preço %>
-    </div>
+  <div class="field">
+    <%= form.label :nome_do_serviço %>
+    <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
   </div>
 
-  <div class="form-check">
-    <label class="form-check-label">
-      <%= form.check_box :contratado, id: :orcamento_contratado %>
-      <label class="col-2 col-form-label"><%= form.label :contratado %></label>
-    </label>
-  </div>
 
-  <div class="actions" style="text-align: right;">
-    <%= form.submit class: "btn btn-primary" %>
-    <a href= "<%= orcamentos_path %>" class= "btn btn-secondary" >Voltar</a>
+  <!-- fazer com javascript -->
+  <!-- <div>
+    <%= form.label :preços_dos_serviços%>
+    <%= select_tag('servico', options_from_collection_for_select(Servico.all, 'preco', 'preco'), prompt: "Selecionar preço")%>
+  </div> -->
+
+
+
+  <!-- <div class="field">
+    <%= form.label :preço_final %>
+    <%= form.text_field :preco, id: :orcamento_preco %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit %>
   </div>
 <% end %>

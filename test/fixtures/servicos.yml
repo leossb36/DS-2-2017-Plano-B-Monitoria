@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  descrição: MyText
+  nome: MyString
+  descricao: MyText
+  preco: 9.99
 
 two:
-  descrição: MyText
+  nome: MyString
+  descricao: MyText
+  preco: 9.99
