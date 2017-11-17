@@ -32,13 +32,11 @@
 
 				<% if user_signed_in? %>
 				<div class = "col-bg-2 align-self-center" id = "planob_who">
-					<%= link_to "Sair", destroy_user_session_path, method: :delete %>
+					Bem vindo(a) <%= current_user.email %>
           </button></a>
         </div>
-				<% else %>
-				<div class = "col-bg-2 align-self-center" id = "planob_contact_us">
-          <a href = "/"><button class = "btn btn-outline-success card-body" type = "submit" id = "contact_card">
-            Não tá logado
+				<div class = "col-bg-2 align-self-center" id = "planob_who">
+					<%= link_to "Sair", destroy_user_session_path, method: :delete %>
           </button></a>
         </div>
 				<% end %>
