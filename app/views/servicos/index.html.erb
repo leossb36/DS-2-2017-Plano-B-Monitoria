@@ -1,4 +1,4 @@
-<!-- <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <h1>Servicos</h1>
 
@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>Descrição</th>
-      <th>Preço</th>
+      <th>Descricao</th>
+      <th>Preco</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,13 +28,4 @@
 
 <br>
 
-<%= link_to 'New Servico', new_servico_path %> -->
-
-<h1>Serviços</h1>
-
-<% for servico in @servicos %>
-  <%= servico.nome %>
-  <% for orcamento in servico.orcamentos %>
-    <%= orcamento.cidade %>
-  <% end %>
-<% end %>
+<%= link_to 'New Servico', new_servico_path %>

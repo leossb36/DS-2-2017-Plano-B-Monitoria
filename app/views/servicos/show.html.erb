@@ -1,4 +1,4 @@
-<!-- <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Nome:</strong>
@@ -6,18 +6,14 @@
 </p>
 
 <p>
-  <strong>Descrição:</strong>
+  <strong>Descricao:</strong>
   <%= @servico.descricao %>
 </p>
 
 <p>
-  <strong>Preço:</strong>
+  <strong>Preco:</strong>
   <%= @servico.preco %>
 </p>
 
 <%= link_to 'Edit', edit_servico_path(@servico) %> |
-<%= link_to 'Back', servicos_path %> -->
-<%= @servico.nome %>
-<% for orcamento in @servico.orcamentos %>
-<%= orcamento.nome %>
-<% end %>
+<%= link_to 'Back', servicos_path %>

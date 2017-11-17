@@ -6,7 +6,10 @@
   <thead>
     <tr>
       <th>Cidade</th>
-      <th>Servico</th>
+      <th colspan="3"></th>
+    </tr>
+    <tr>
+      <th>Preço</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +18,6 @@
     <% @orcamentos.each do |orcamento| %>
       <tr>
         <td><%= orcamento.cidade %></td>
-        <td><%= orcamento.servico_id %></td>
         <td><%= link_to 'Show', orcamento %></td>
         <td><%= link_to 'Edit', edit_orcamento_path(orcamento) %></td>
         <td><%= link_to 'Destroy', orcamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
