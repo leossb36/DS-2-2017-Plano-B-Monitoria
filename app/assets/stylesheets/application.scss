@@ -1,5 +1,3 @@
-@import "bootstrap";
-
 body {
   background-color: #317B22;
 }
@@ -51,3 +49,6 @@ body {
 #no_margin {
   margin: 0;
 }
+input, textarea { display: block; }
+
+@import "bootstrap";
