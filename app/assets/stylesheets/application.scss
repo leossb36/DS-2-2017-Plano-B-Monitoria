@@ -1,53 +1,39 @@
 @import "bootstrap";
 
-body {
-  background-color: #317B22;
+/* YOUR CUSTOM STYLES */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
 
-#planob_service {
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
 
-}
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
 
-#planob_budget {
-  margin-right: 1em;
-}
-
-#planob_who {
-  margin-left: 1em;
-}
-
-#service_card {
-  border: 0;
-}
-
-#budget_card {
-  border: 0;
-}
-
-#who_card {
-  border: 0;
-}
-
-#contact_card {
-  border: 0;
-}
-
-#planob_bar {
-  background: rgba(250,250,250,250) !important;
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
-  box-shadow: 0 0.2em 2em #262626;
-}
-
-.alignBody {
-  margin-top: 180px;
-}
-
-.row {
-  margin: auto;
-}
-
-#no_margin {
-  margin: 0;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
