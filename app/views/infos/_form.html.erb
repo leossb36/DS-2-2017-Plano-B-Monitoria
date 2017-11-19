@@ -16,6 +16,12 @@
     <%= form.text_area :texto, id: :info_texto %>
   </div>
 
+  <div class="field">
+    <%= form.label :imagem %>
+    <%= form.file_field :image %>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

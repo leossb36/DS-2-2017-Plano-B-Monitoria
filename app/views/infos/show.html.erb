@@ -5,5 +5,11 @@
   <%= @info.texto %>
 </p>
 
+<p>
+  <strong>Imagem:</strong>
+  <!-- <%= @info.image %> -->
+  <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
+</p>
+
 <%= link_to 'Edit', edit_info_path(@info) %> |
 <%= link_to 'Back', infos_path %>
