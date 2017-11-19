@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :título_da_notícia %>
+    <%= form.text_field :titulo, id: :info_titulo %>
+  </div>
+
+  <div class="field">
     <%= form.label :texto %>
     <%= form.text_area :texto, id: :info_texto %>
   </div>

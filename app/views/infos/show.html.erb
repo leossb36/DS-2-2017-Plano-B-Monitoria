@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Título da notícia:</strong>
+  <%= @info.titulo %>
+</p>
+
+<p>
   <strong>Texto:</strong>
   <%= @info.texto %>
 </p>
 
 <p>
   <strong>Imagem:</strong>
-  <!-- <%= @info.image %> -->
   <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
 </p>
 
