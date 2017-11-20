@@ -71,3 +71,56 @@ body {
 #buttonsMenu {
   border: 0;
 }
+
+#mainNavbar {
+  background-color: white;
+  box-shadow: 0 0.2em 2em #262626;
+}
+
+#priceBox {
+  width: 50%;
+  height: 5%;
+  background-color: green;
+  color: white;
+  padding: 4%;
+  padding-bottom: 2%;
+  float: right;
+  text-align: center;
+  display: block;
+}
+
+#backStyle {
+  margin: 10%;
+  text-align: left;
+}
+
+#backServices {
+  padding: 10%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+#backButton {
+  margin-top: 4%;
+}
+
+#servicesButton {
+  min-width:400px;
+  min-height:120px;
+  font-size: 30px;
+  margin: 10px;
+  margin-right: 25px;
+}
+
+#bottomButton {
+  margin-bottom: 5%;
+}
+
+#editButton {
+  margin-right: 2%;
+  justify-content: space-between;
+}
+
+.container-fluid{
+  margin-top: 3%;
+}

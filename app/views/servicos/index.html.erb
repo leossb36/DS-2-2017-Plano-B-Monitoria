@@ -1,31 +1,23 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Servicos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Descricao</th>
-      <th>Preco</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @servicos.each do |servico| %>
-      <tr>
-        <td><%= servico.nome %></td>
-        <td><%= servico.descricao %></td>
-        <td><%= servico.preco %></td>
-        <td><%= link_to 'Show', servico %></td>
-        <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
-        <td><%= link_to 'Destroy', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Servico', new_servico_path %>
+<div class="container-fluid">
+  <div class="row mt-10">
+    <div class="mx-auto my-auto text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%; ">Serviços</h1>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <div id="backServices">
+            <% @servicos.each do |servico| %>
+              <%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton' %>
+            <% end %>
+          </div>
+          <div id="bottomButton">
+            <%= button_to 'Criar Serviço', new_servico_path, method: :get, class: 'btn btn-primary', id: ''%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

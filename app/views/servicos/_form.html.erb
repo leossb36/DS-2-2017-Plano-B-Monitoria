@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
+  <div class="form-group">
+    <label>Nome:</label>
     <%= form.text_field :nome, id: :servico_nome %>
+    <small class="form-text text-muted">Escolha um nome para esse serviço.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :descricao %>
+  <div class="form-group">
+    <label>Descrição:</label>
     <%= form.text_area :descricao, id: :servico_descricao %>
+    <small class="form-text text-muted">Descreva esse serviço.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :preco %>
+  <div class="form-group">
+    <label>Preço:</label>
     <%= form.text_field :preco, id: :servico_preco %>
+    <small class="form-text text-muted">Defina um preço para esse serviço.</small>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= form.submit :Submit, class:'btn btn-primary' %>
+
 <% end %>
