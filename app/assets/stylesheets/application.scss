@@ -1,54 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require home.scss
+ */
+@import "bootstrap";
+
+/* YOUR CUSTOM STYLES */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
 body {
   background-color: #317B22;
 }
 
-#planob_service {
-
-
+#logo {
+  -ms-transform: rotate(-4deg); /* IE 9 */
+   -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
+   transform: rotate(-4deg);
+   width: 200px;
+   height: auto;
+   margin-left: 30%;
 }
 
-#planob_budget {
-  margin-right: 1em;
+#navbarSupportedContent {
+  margin-left: 8%;
 }
 
-#planob_who {
-  margin-left: 1em;
-}
-
-#service_card {
+#buttonsMenu {
   border: 0;
 }
 
-#budget_card {
-  border: 0;
-}
-
-#who_card {
-  border: 0;
-}
-
-#contact_card {
-  border: 0;
-}
-
-#planob_bar {
-  background: rgba(250,250,250,250) !important;
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
+#mainNavbar {
+  background-color: white;
   box-shadow: 0 0.2em 2em #262626;
 }
 
-.alignBody {
-  margin-top: 180px;
+#priceBox {
+  width: 50%;
+  height: 5%;
+  background-color: green;
+  color: white;
+  padding: 4%;
+  padding-bottom: 2%;
+  float: right;
+  text-align: center;
+  display: block;
 }
 
-.row {
-  margin: auto;
+#backStyle {
+  margin: 10%;
+  text-align: left;
 }
 
-#no_margin {
-  margin: 0;
+#backServices {
+  padding: 10%;
+  padding-top: 2%;
+  padding-left: 2%;
 }
-input, textarea { display: block; }
 
-@import "bootstrap";
+#backButton {
+  margin-top: 4%;
+}
+
+#servicesButton {
+  min-width:400px;
+  min-height:120px;
+  font-size: 30px;
+  margin: 10px;
+  margin-right: 25px;
+}
+
+#bottomButton {
+  margin-bottom: 5%;
+}
+
+#editButton {
+  margin-right: 2%;
+  justify-content: space-between;
+}
+
+.container-fluid{
+  margin-top: 3%;
+}

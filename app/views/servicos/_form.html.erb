@@ -1,4 +1,4 @@
-<!-- <%= form_with(model: servico, local: true) do |form| %>
+<%= form_with(model: servico, local: true) do |form| %>
   <% if servico.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
@@ -11,38 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
+  <div class="form-group">
+    <label>Nome:</label>
     <%= form.text_field :nome, id: :servico_nome %>
+    <small class="form-text text-muted">Escolha um nome para esse serviço.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :descrição %>
-    <%= form.text_area :descrição, id: :servico_descrição %>
+  <div class="form-group">
+    <label>Descrição:</label>
+    <%= form.text_area :descricao, id: :servico_descricao %>
+    <small class="form-text text-muted">Descreva esse serviço.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :preço %>
-    <%= form.text_field :preço, id: :servico_preço %>
+  <div class="form-group">
+    <label>Preço:</label>
+    <%= form.text_field :preco, id: :servico_preco %>
+    <small class="form-text text-muted">Defina um preço para esse serviço.</small>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %> -->
+<%= form.submit :Submit, class:'btn btn-primary' %>
 
-<h1>Novo serviço</h1>
-<%= form_for @servico do |f| %>
-  <p>
-    Nome: <%= f.text_field :nome %>
-  </p>
-  <p>
-    Descrição: <%= f.text_area :descricao %>
-  </p>
-  <p>
-    Preço: <%= f.text_field :preco %>
-  </p>
-  <p>
-    <%= f.submit 'Criar Serviço' %>
-  </p>
 <% end %>

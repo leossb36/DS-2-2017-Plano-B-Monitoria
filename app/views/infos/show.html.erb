@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Título da notícia:</strong>
+  <%= @info.titulo %>
+</p>
+
+<p>
   <strong>Texto:</strong>
   <%= @info.texto %>
+</p>
+
+<p>
+  <strong>Imagem:</strong>
+  <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
 </p>
 
 <%= link_to 'Edit', edit_info_path(@info) %> |

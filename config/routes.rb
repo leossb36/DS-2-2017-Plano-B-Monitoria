@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-
   resources :orcamentos
   resources :servicos
   resources :faleconosco
+  resources :servicos, only: [:new, :create, :edit, :update]
+  resources :orcamentos, only: [:new, :create, :edit, :update]
   root 'home#index'
   get 'home/index'
 

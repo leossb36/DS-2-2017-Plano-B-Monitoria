@@ -1,23 +1,33 @@
-<!-- <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @servico.nome %>
-</p>
+<div class="container-fluid">
+  <div class="row mt-10">
+    <div class="mx-auto my-auto text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header" style="background-color: green;">
+          <h1 style="font-size:150%; color:white;"><%= @servico.nome %></h1>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <div id="backStyle">
 
-<p>
-  <strong>Descrição:</strong>
-  <%= @servico.descricao %>
-</p>
-
-<p>
-  <strong>Preço:</strong>
-  <%= @servico.preco %>
-</p>
-
-<%= link_to 'Edit', edit_servico_path(@servico) %> |
-<%= link_to 'Back', servicos_path %> -->
-<%= @servico.nome %>
-<% for orcamento in @servico.orcamentos %>
-<%= orcamento.nome %>
-<% end %>
+            <p>
+              <strong>Descrição:</strong><br />
+              <%= @servico.descricao %>
+            </p>
+            <br />
+            <div id="priceBox">
+              <p>
+                <strong>Investimento:</strong><br />
+                <p style="font-size: 35px">R$ <%= @servico.preco %></p>
+              </p>
+            </div>
+            <tr>
+              <td><%= button_to 'Edit', edit_servico_path(@servico), method: :get, class:'btn btn-info' %></td>
+              <td><%= button_to 'Destroy', @servico, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', id: 'backButton' %></td>
+              <td><%= button_to 'Back', servicos_path, method: :get, class: 'btn btn-secundary', id: 'backButton' %></td>
+            </tr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,13 +13,28 @@
 
   <div class="field">
     <%= form.label :cidade %>
-    <%= form.text_field :cidade, id: :orcamento_cidade %>
+    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Taguatinga','Taguatinga'],
+    ['Santa Maria','Santa Maria']], params[:cidade]), {}, {:id=>"cidade_id"} %>
   </div>
 
   <div class="field">
-    <%= form.label :servico_id %>
-    <%= form.number_field :servico_id, id: :orcamento_servico_id %>
+    <%= form.label :nome_do_serviço %>
+    <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
   </div>
+
+
+  <!-- fazer com javascript -->
+  <!-- <div>
+    <%= form.label :preços_dos_serviços%>
+    <%= select_tag('servico', options_from_collection_for_select(Servico.all, 'preco', 'preco'), prompt: "Selecionar preço")%>
+  </div> -->
+
+
+
+  <!-- <div class="field">
+    <%= form.label :preço_final %>
+    <%= form.text_field :preco, id: :orcamento_preco %>
+  </div> -->
 
   <div class="actions">
     <%= form.submit %>

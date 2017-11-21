@@ -2,8 +2,6 @@
 
 one:
   cidade: MyString
-  servico_id: 1
 
 two:
   cidade: MyString
-  servico_id: 1
