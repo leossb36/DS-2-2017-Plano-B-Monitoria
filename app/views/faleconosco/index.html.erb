@@ -46,7 +46,20 @@
         <div class = "card">
          <div class = "card-body">
            <div class = "card-text">
-             It has been 4 hours since I successfully sucked my own penis. Things are different now. As soon as mouth-to-penis contact was made I felt a shockwave through my body. I have reason to believe I have super strength and telekinesis now.. 3 hours after contact I noticed a van parked on my street but no one has entered or exited the car since its arrival. I fear for my safety, I'm not sure what sort of power I may have stumbled upon but it's possible that the government has found out. If I don't update this again please send help.
+             <p class="center bold h3">
+               Fale Conosco
+             </p>
+             <%= form_for @message, url: create_message_url do |f| %>
+               <%= notice %>
+               <%= @message.errors.full_messages.join(', ') %>
+
+               <%= f.text_field :name, placeholder: 'Nome' %>
+               <br>
+               <%= f.email_field :email, placeholder: 'Email' %>
+               <br>
+               <%= f.text_area :body, placeholder: 'Mensagem' %>
+               <%= f.submit 'Enviar' %>
+             <% end %>
              <br><br><br><br><br>
            </div>
          </div>

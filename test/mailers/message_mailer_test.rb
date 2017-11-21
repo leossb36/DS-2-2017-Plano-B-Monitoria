@@ -13,8 +13,8 @@ class MessageMailerTest < ActionMailer::TestCase
       email.deliver_now
     end
 
-    assert_equal 'Message from www.murdo.ch', email.subject
-    assert_equal ['stephen@example.org'], email.to
+    assert_equal 'Mensagem Cliente Plano B Monitoria', email.subject
+    assert_equal ['thiagoiferreira@hotmail.com'], email.to
     assert_equal ['anna@example.org'], email.from
     assert_match /hello, how are you doing?/, email.body.encoded
   end
