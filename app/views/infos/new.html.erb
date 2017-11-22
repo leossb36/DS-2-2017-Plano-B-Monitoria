@@ -1,5 +1,17 @@
-<h1>New Info</h1>
-
-<%= render 'form', info: @info %>
-
-<%= link_to 'Back', infos_path %>
+<div class="container-fluid">
+  <div class="row mt-10">
+    <div class="mx-auto my-auto text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%;">Nova Notícia</h1>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <div id="backStyle">
+            <%= render 'form', info: @info %>
+            <%= button_to 'Back', infos_path,method: :get,  class:'btn btn-secundary', id: 'backButton' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

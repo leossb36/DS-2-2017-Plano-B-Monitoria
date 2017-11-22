@@ -11,23 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :título_da_notícia %>
+  <div class="form-group">
+    <label>Título da notícia:</label>
     <%= form.text_field :titulo, id: :info_titulo %>
+    <small class="form-text text-muted">Digite o título da notícia.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :texto %>
+  <div class="form-group">
+    <label>Texto:</label>
     <%= form.text_area :texto, id: :info_texto %>
+    <small class="form-text text-muted">Faça o texto da notícia.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :imagem %>
+  <div class="form-group">
+    <label>Imagem:</label>
     <%= form.file_field :image %>
+    <small class="form-text text-muted">Insira a imagem para a notícia.</small>
   </div>
 
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
