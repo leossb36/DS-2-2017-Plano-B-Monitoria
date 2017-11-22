@@ -1,4 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="mx-auto my-auto text-center col-md-6">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h3><strong>Orçamento</strong></h3>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">  
+          <div id="backServices">
+            <% @orcamentos.each do |orcamento| %>
+              <%= button_to orcamento.cidade, orcamento, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="row justify-content-center" id="buttonEdit">
+          <div class="col-md-4">
+            <%= button_to 'Novo Orçamento', new_orcamento_path, method: :get, class:'btn planob-button-submit' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Orcamentos</h1>
 
@@ -26,6 +50,10 @@
   </tbody>
 </table>
 
-<br>
-
 <%= link_to 'New Orcamento', new_orcamento_path %>
+
+<br>
+ -->
+
+
+

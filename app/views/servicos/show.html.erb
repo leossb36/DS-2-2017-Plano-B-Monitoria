@@ -1,30 +1,36 @@
 
 <div class="container-fluid">
-  <div class="row mt-10">
-    <div class="mx-auto my-auto text-center">
+  <div class="row mt-10 justify-content-center">
+    <div class="mx-auto my-auto text-center col-md-6">
       <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
-        <div class="card-header" style="background-color: green;">
-          <h1 style="font-size:150%; color:white;"><%= @servico.nome %></h1>
-        </div>
-        <div class="x_panel slide-in-blurred-top" style="background-color: white">
-          <div id="backStyle">
-
-            <p>
-              <strong>Descrição:</strong><br />
-              <%= @servico.descricao %>
-            </p>
-            <br />
-            <div id="priceBox">
-              <p>
-                <strong>Investimento:</strong><br />
-                <p style="font-size: 35px">R$ <%= @servico.preco %></p>
-              </p>
+        <div class="x_panel slide-in-blurred-top">
+          <div class="card-header">
+            <h1 style="font-size:150%"><%= @servico.nome %></h1>
+          </div>
+          <div class="card-body" align="center">
+            <h3><strong>Descrição</strong></h3>
+            <%= @servico.descricao %>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6" > 
+              <div class="card" align="center">
+                <p>
+                  <h3><strong>Valor</strong></h3>
+                  <h1><p><strong> R$ <%= @servico.preco %></strong></p></h1>
+                </p>
+              </div>
             </div>
-            <tr>
-              <td><%= button_to 'Edit', edit_servico_path(@servico), method: :get, class:'btn btn-info' %></td>
-              <td><%= button_to 'Destroy', @servico, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', id: 'backButton' %></td>
-              <td><%= button_to 'Back', servicos_path, method: :get, class: 'btn btn-secundary', id: 'backButton' %></td>
-            </tr>
+          </div>
+          <div class ="row justify-content-around">
+            <div class="col-4">
+              <td><%= button_to 'Edit', edit_servico_path(@servico), method: :get, class:'btn planob-button-edit' %></td>
+            </div>
+            <div class="col-md-4" align="center">
+              <td><%= button_to 'Destroy', @servico, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn planob-button-destroy', id: 'backButton' %></td>
+            </div>
+            <div class="col-md-4" align="center">
+              <td><%= button_to 'Back', servicos_path, method: :get, class: 'btn planob-button-back', id: 'backButton' %></td>
+            </div>
           </div>
         </div>
       </div>
