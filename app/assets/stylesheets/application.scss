@@ -53,6 +53,7 @@
 
 body {
   background-color: #317B22;
+  margin-top: 7.25em;
 }
 
 #logo {
@@ -72,55 +73,66 @@ body {
   border: 0;
 }
 
-#mainNavbar {
-  background-color: white;
-  box-shadow: 0 0.2em 2em #262626;
-}
-
-#priceBox {
-  width: 50%;
-  height: 5%;
-  background-color: green;
-  color: white;
-  padding: 4%;
-  padding-bottom: 2%;
-  float: right;
-  text-align: center;
-  display: block;
-}
-
 #backStyle {
   margin: 10%;
   text-align: left;
 }
 
-#backServices {
-  padding: 10%;
-  padding-top: 2%;
-  padding-left: 2%;
-}
-
-#backButton {
-  margin-top: 4%;
-}
-
 #servicesButton {
-  min-width:400px;
-  min-height:120px;
-  font-size: 30px;
-  margin: 10px;
-  margin-right: 25px;
-}
-
-#bottomButton {
-  margin-bottom: 5%;
-}
-
-#editButton {
-  margin-right: 2%;
-  justify-content: space-between;
+  min-width:10em;
+  min-height:1em;
+  font-size: 2em;
+  margin: 0.1em;
 }
 
 .container-fluid{
   margin-top: 3%;
+}
+
+.planob-button-submit, .planob-button-back, .planob-button-show, .planob-button-destroy, .planob-button-edit {
+  background-color: #4D62A0;
+  align-self: center;
+  margin: 0.5em 0;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  border-width: 0;
+  font-weight: bold;
+}
+
+
+.planob-button-submit:enabled:hover {
+  background-color: #233B7F;
+}
+
+.planob-button-back {
+  background-color: #5D737E; 
+}
+
+.planob-button-back:enabled:hover {
+  background-color: #44545C;
+}
+
+.planob-button-show {
+  background-color: #157F1F; 
+}
+
+.planob-button-show:enabled:hover {
+  background-color: #105D17;
+}
+
+.planob-button-edit {
+  background-color: #A6CFD5; 
+}
+
+.planob-button-edit:enabled:hover {
+  background-color: #79979B; 
+}
+
+.planob-button-destroy {
+  background-color: #E52D2D; 
+}
+
+.planob-button-destroy:enabled:hover {
+  background-color: #BC2525; 
 }
