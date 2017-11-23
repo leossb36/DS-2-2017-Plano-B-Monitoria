@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNavbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNavbar">
         <a class="navbar-brand" href="/">
-            <img id="logo" src="../assets/planob.png" alt="Plano B Logo">
+            <img id="logo" src="../assets/planB.png" alt="Plano B Logo">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -34,6 +34,18 @@
               <a class="nav-link" href="/contact-me"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
                 Fale Conosco
               </button></a>
+            </li>
+            <li class="nav-item">
+              <% if user_signed_in? %>
+              <span class="navbar-text" id = "navbartext">
+                Bem vindo(a) <%= current_user.email %>
+              </span>
+              <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
+              <% else %>
+              <a class="nav-link" href="/users/sign_up"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Cadastre-se
+              </button></a>
+              <% end %>
             </li>
           </ul>
         </div>

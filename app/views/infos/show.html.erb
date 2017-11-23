@@ -1,3 +1,53 @@
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="mx-auto my-auto text-center col-md-6">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="x_panel slide-in-blurred-top">
+          <div class="card-header">
+            <h1 style="font-size:150%"><%= @info.titulo %></h1>
+          </div>
+          <div class="card-body" align="center">
+            <h3><strong>Texto da notícia</strong></h3>
+            <%= @info.texto %>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6" >
+              <div class="card" align="center">
+                <p>
+                  <h3><strong>Imagem da notícia</strong></h3>
+                  <p>
+                    <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
+                  </p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class ="row justify-content-around">
+            <div class="col-4">
+              <td><%= button_to 'Edit', edit_servico_path(@info), method: :get, class:'btn planob-button-edit' %></td>
+            </div>
+            <div class="col-md-4" align="center">
+              <td><%= button_to 'Destroy', @info, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn planob-button-destroy', id: 'backButton' %></td>
+            </div>
+            <div class="col-md-4" align="center">
+              <td><%= button_to 'Back', infos_path, method: :get, class: 'btn planob-button-back', id: 'backButton' %></td>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,4 +66,4 @@
 </p>
 
 <%= link_to 'Edit', edit_info_path(@info) %> |
-<%= link_to 'Back', infos_path %>
+<%= link_to 'Back', infos_path %> -->

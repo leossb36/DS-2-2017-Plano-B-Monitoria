@@ -25,6 +25,7 @@ class ServicosController < ApplicationController
   # POST /servicos.json
   def create
     @servico = Servico.new(servico_params)
+    @servico.user = current_user
 
     respond_to do |format|
       if @servico.save
