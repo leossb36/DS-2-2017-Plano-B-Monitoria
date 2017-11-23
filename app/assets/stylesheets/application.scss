@@ -73,6 +73,9 @@ body {
 #buttonsMenu {
   border: 0;
 }
+#navbartext {
+  padding-top: 12%;
+}
 
 #backStyle {
   margin: 10%;
@@ -107,7 +110,7 @@ body {
 }
 
 .planob-button-back {
-  background-color: #5D737E; 
+  background-color: #5D737E;
 }
 
 .planob-button-back:enabled:hover {
@@ -115,7 +118,7 @@ body {
 }
 
 .planob-button-show {
-  background-color: #157F1F; 
+  background-color: #157F1F;
 }
 
 .planob-button-show:enabled:hover {
@@ -123,17 +126,17 @@ body {
 }
 
 .planob-button-edit {
-  background-color: #A6CFD5; 
+  background-color: #A6CFD5;
 }
 
 .planob-button-edit:enabled:hover {
-  background-color: #79979B; 
+  background-color: #79979B;
 }
 
 .planob-button-destroy {
-  background-color: #E52D2D; 
+  background-color: #E52D2D;
 }
 
 .planob-button-destroy:enabled:hover {
-  background-color: #BC2525; 
+  background-color: #BC2525;
 }

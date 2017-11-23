@@ -35,6 +35,18 @@
                 Fale Conosco
               </button></a>
             </li>
+            <li class="nav-item">
+              <% if user_signed_in? %>
+              <span class="navbar-text" id = "navbartext">
+                Bem vindo(a) <%= current_user.email %>
+              </span>
+              <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
+              <% else %>
+              <a class="nav-link" href="/users/sign_up"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Cadastre-se
+              </button></a>
+              <% end %>
+            </li>
           </ul>
         </div>
     </nav>
