@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<body>
+  <div class = "container-fluid scroll">
+      <div class = "row h-100" id ="no_margin">
+        <div class = "col-md-8 ">
+          <div class = "card ">
+            <div class = "card-body">
+              <div class = "card-text">
+                <div class="container">
+                  <div class="row">
+                    <div id="myCarousel" class="carousel  slide">
+
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <div class="carousel-inner col-md-12">
+                        <br>
+                        <div class="item" align="left"><h3>Informações para Contato</h3></div>
+                        <br>
+                        <div class="item" align="left"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"> </i> <b>+55 61 8211-6098</b> </div>
+                        <br>
+                        <div class="item" align="left"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"> </i><a href="https://www.facebook.com/Plano-B-Monitoria-260380651074818/">  Facebook</a></div>
+                        <br>
+                        <div class="item" align="left"> <i class="fa fa-envelope-o fa-2x" aria-hidden="true">   </i> <b>  planob_monitoria@hotmail.com  </b> </div>
+                        <div class="item" align="left"> <img src="" height = "200" /></div>
+                      </div>
+
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class = "col-md-4">
+        <div class = "card">
+         <div class = "card-body">
+           <div class = "card-text center-block">
+             <p class="center bold h3">
+               Fale Conosco
+             </p>
+             <br>
+             <%= form_for @message, url: create_message_url do |f| %>
+               <p class = "center h5">
+                 Nome
+               </p>
+               <%= f.text_field :name, placeholder: 'Nome' %>
+               <br>
+               <p class="center h5"> E-mail</p>
+               <%= f.email_field :email, placeholder: 'Email' %>
+               <br>
+               <p class="center h5">Mensagem</p>
+               <%= f.text_area :body, placeholder: 'Mensagem', :id=> "message_area", :cols => 30, :rows => 5 %>
+               <br>
+               <%= f.submit 'Enviar' %>
+               <%= notice %>
+               <%= @message.errors.full_messages.join(', ') %>
+             <% end %>
+             <br><br><br><br><br>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
