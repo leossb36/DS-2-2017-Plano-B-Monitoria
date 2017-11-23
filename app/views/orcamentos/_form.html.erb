@@ -22,21 +22,5 @@
     <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
   </div>
 
-
-  <!-- fazer com javascript -->
-  <!-- <div>
-    <%= form.label :preços_dos_serviços%>
-    <%= select_tag('servico', options_from_collection_for_select(Servico.all, 'preco', 'preco'), prompt: "Selecionar preço")%>
-  </div> -->
-
-
-
-  <!-- <div class="field">
-    <%= form.label :preço_final %>
-    <%= form.text_field :preco, id: :orcamento_preco %>
-  </div> -->
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit 'Criar Orçamento', class:'btn planob-button-submit' %>
 <% end %>

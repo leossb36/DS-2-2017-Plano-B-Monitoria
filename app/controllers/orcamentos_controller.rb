@@ -1,6 +1,5 @@
 class OrcamentosController < ApplicationController
   before_action :set_orcamento, only: [:show, :edit, :update, :destroy]
-
   # GET /orcamentos
   # GET /orcamentos.json
   def index
@@ -25,6 +24,7 @@ class OrcamentosController < ApplicationController
   # POST /orcamentos.json
   def create
     @orcamento = Orcamento.new(orcamento_params)
+    @orcamento.user = current_user
 
     respond_to do |format|
       if @orcamento.save

@@ -1,5 +1,19 @@
-<h1>New Orcamento</h1>
-
-<%= render 'form', orcamento: @orcamento %>
-
-<%= link_to 'Back', orcamentos_path %>
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="mx-auto my-auto text-center col-md-6">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h3><strong>Orçamento</strong></h3>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <%= render 'form', orcamento: @orcamento %>
+        </div>
+        <div class="row justify-content-center" id="buttonEdit">
+          <!-- <div class="col-md-4">
+            <%= button_to 'Gerar Orçamento', orcamentos_path, method: :post, class:'btn planob-button-submit' %>
+           --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,7 @@ class InfosController < ApplicationController
   # POST /infos.json
   def create
     @info = Info.new(info_params)
+    @info.user = current_user
 
     respond_to do |format|
       if @info.save
@@ -69,6 +70,6 @@ class InfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def info_params
-      params.require(:info).permit(:texto)
+      params.require(:info).permit(:titulo, :texto, :image, :user_id)
     end
 end

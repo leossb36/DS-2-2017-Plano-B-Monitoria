@@ -1,6 +1,7 @@
 class Orcamento < ApplicationRecord
   before_save :update_price
   belongs_to :servico
+  belongs_to :user
 
   def update_price
     if self.cidade == 'Gama'
