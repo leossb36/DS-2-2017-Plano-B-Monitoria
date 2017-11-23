@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DS22017PlanoBMonitoria</title>
+    <title>Plano B Monitoria</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNavbar">
+        <a class="navbar-brand" href="/">
+            <img id="logo" src="../assets/planB.png" alt="Plano B Logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/servicos"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Serviços
+              </button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/orcamentos/new"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Orçamento Online
+              </button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Quem Somos
+              </button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact-me"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Fale Conosco
+              </button></a>
+            </li>
+            <li class="nav-item">
+              <% if user_signed_in? %>
+              <span class="navbar-text" id = "navbartext">
+                Bem vindo(a) <%= current_user.email %>
+              </span>
+              <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
+              <% else %>
+              <a class="nav-link" href="/users/sign_up"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                Cadastre-se
+              </button></a>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+    </nav>
   </body>
+
+  <%= yield %>
 </html>

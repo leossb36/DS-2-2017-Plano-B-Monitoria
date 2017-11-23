@@ -1,0 +1,23 @@
+
+
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="col-md-6 text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%; ">Serviços</h1>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <div id="backServices">
+            <% @servicos.each do |servico| %>
+              <%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton' %>
+            <% end %>
+          </div>
+          <div id="bottomButton">
+            <%= button_to 'Criar Serviço', new_servico_path, method: :get, class: 'planob-button-submit', id: ''%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

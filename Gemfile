@@ -4,6 +4,17 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+#mailer gems
+gem 'mail_form'
+gem 'simple_form'
+# Bootstrap for the frontend
+gem 'bootstrap', '~> 4.0.0.alpha6'
+# JavaScript
+gem 'jquery-rails'
+
+gem 'devise'
+
+gem "font-awesome-rails"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -19,8 +30,16 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem "paperclip", "~> 5.0.0"
+
 #gem devise
 gem 'devise'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>=1.1.0'
+end
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

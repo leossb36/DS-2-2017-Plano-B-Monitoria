@@ -1,0 +1,26 @@
+<%= form_with(model: orcamento, local: true) do |form| %>
+  <% if orcamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orcamento.errors.count, "error") %> prohibited this orcamento from being saved:</h2>
+
+      <ul>
+      <% orcamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Taguatinga','Taguatinga'],
+    ['Santa Maria','Santa Maria']], params[:cidade]), {}, {:id=>"cidade_id"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_do_serviço %>
+    <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
+  </div>
+
+  <%= form.submit 'Criar Orçamento', class:'btn planob-button-submit' %>
+<% end %>

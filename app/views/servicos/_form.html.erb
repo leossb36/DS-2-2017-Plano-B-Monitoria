@@ -1,0 +1,34 @@
+<%= form_with(model: servico, local: true) do |form| %>
+  <% if servico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
+
+      <ul>
+      <% servico.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label>Nome:</label>
+    <%= form.text_field :nome, id: :servico_nome %>
+    <small class="form-text text-muted">Escolha um nome para esse serviço.</small>
+  </div>
+
+  <div class="form-group">
+    <label>Descrição:</label>
+    <%= form.text_area :descricao, id: :servico_descricao %>
+    <small class="form-text text-muted">Descreva esse serviço.</small>
+  </div>
+
+  <div class="form-group">
+    <label>Preço:</label>
+    <%= form.text_field :preco, id: :servico_preco %>
+    <small class="form-text text-muted">Defina um preço para esse serviço.</small>
+  </div>
+
+<%= form.submit :Submit, class:'btn planob-button-submit' %>
+
+<% end %>
