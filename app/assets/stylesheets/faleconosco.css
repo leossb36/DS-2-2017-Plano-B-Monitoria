@@ -1,0 +1,8 @@
+@import "bootstrap";
+#div {
+background: none no-repeat scroll 0 0 #fff;
+position: relative;
+}
+#col {
+  background: white;
+}

@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
-# git_source(:github) do |repo_name|
-#   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-#   "https://github.com/#{repo_name}.git"
-# end
-
-
-
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+#mailer gems
+gem 'mail_form'
+gem 'simple_form'
+# Bootstrap for the frontend
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # JavaScript
 gem 'jquery-rails'
 
