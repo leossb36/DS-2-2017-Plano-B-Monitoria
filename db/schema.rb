@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123191303) do
+ActiveRecord::Schema.define(version: 20171123212951) do
 
   create_table "infos", force: :cascade do |t|
     t.text "texto"
@@ -31,7 +31,9 @@ ActiveRecord::Schema.define(version: 20171123191303) do
     t.datetime "updated_at", null: false
     t.integer "servico_id"
     t.decimal "preco"
+    t.integer "user_id"
     t.index ["servico_id"], name: "index_orcamentos_on_servico_id"
+    t.index ["user_id"], name: "index_orcamentos_on_user_id"
   end
 
   create_table "servicos", force: :cascade do |t|
@@ -40,6 +42,8 @@ ActiveRecord::Schema.define(version: 20171123191303) do
     t.decimal "preco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_servicos_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
