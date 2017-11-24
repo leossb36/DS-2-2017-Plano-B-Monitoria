@@ -1,4 +1,5 @@
 class OrcamentosController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
   before_action :set_orcamento, only: [:show, :edit, :update, :destroy]
   # GET /orcamentos
   # GET /orcamentos.json
