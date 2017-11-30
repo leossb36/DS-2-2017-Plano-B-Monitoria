@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
 
+  resources :about
   resources :infos
   devise_for :users
   get 'contact-me', to: 'messages#new', as: 'new_message'
