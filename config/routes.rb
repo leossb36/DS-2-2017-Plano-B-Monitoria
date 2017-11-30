@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :orcamentos, only: [:new, :create, :edit, :update]
   root 'home#index'
   get 'home/index'
-  get "/:about" => "about#show"
-
+  
+  resources :about
   resources :infos
   devise_for :users
   get 'contact-me', to: 'messages#new', as: 'new_message'
