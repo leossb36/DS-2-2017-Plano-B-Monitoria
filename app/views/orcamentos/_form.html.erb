@@ -13,8 +13,11 @@
 
   <div class="field">
     <%= form.label :cidade %>
-    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Taguatinga','Taguatinga'],
-    ['Santa Maria','Santa Maria']], params[:cidade]), {}, {:id=>"cidade_id"} %>
+    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Santa Maria','Santa Maria'],
+    ['Taguatinga','Taguatinga'], ['Ceilândia','Ceilândia'],['Samambaia','Samambaia'],
+    ['Águas Claras','Águas Claras'], ['Asa Norte','Asa Norte'], ['Asa Sul','Asa Sul'],
+    ['Sudoeste','Sudoeste']],
+     params[:cidade]), {}, {:id=>"cidade_id"} %>
   </div>
 
   <div class="field">

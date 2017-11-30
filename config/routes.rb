@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :orcamentos, only: [:new, :create, :edit, :update]
   root 'home#index'
   get 'home/index'
+  get "/:about" => "about#show"
 
   resources :infos
   devise_for :users
