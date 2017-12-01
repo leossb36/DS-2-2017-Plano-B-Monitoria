@@ -30,11 +30,28 @@
                 Quem Somos
               </button></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contacts"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
-                Fale Conosco
-              </button></a>
-            </li>
+            <% if current_user.present? && current_user.is_admin==false %>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacts"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                  Fale Conosco
+                </button></a>
+              </li>
+            <% end %>
+            <% if current_user.blank? %>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacts"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                  Fale Conosco
+                </button></a>
+              </li>
+            <% elsif current_user.is_admin? %>
+              <li class="nav-item">
+                <a class="nav-link" href="/infos"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                  Informações
+                </button></a>
+              </li>
+            <% else %>
+
+            <% end %>
             <li class="nav-item">
               <% if user_signed_in? %>
               <span class="navbar-text" id = "navbartext">
