@@ -1,7 +1,6 @@
 class ServicosController < ApplicationController
-  # before_action :authenticate_user!, :except => [:index]
   before_action :set_servico, only: [:show, :edit, :update, :destroy]
-  before_action :except => [:index] do
+  before_action :except =>[:show, :index] do
     redirect_to root_path unless current_user && current_user.is_admin?
   end
 

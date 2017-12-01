@@ -21,6 +21,7 @@
               </div>
             </div>
           </div>
+          <% if current_user.is_admin %>
           <div class ="row justify-content-around" style="margin-top: 5%; margin-bottom: 3%;">
             <div class="col-3">
               <td><%= button_to 'Editar', edit_servico_path(@servico), method: :get, class:'btn btn-secundary' %></td>
@@ -31,6 +32,7 @@
             <div class="col-md-3" align="center">
               <td><%= button_to 'Voltar', servicos_path, method: :get, class: 'btn btn-success', id: 'backButton' %></td>
             </div>
+          <% end %>
           </div>
         </div>
       </div>
