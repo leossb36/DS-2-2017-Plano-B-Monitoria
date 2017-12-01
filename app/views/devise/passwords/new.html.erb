@@ -9,7 +9,7 @@
         <div class="card-header">
           <h1 style="font-size:150%;">Esqueceu sua senha?</h1>
         </div>
-        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+        <div class="x_panel slide-in-blurred-top" style="background-color: white" id="backStyle">
           <div class="panel-body">
             <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, role: "form" }) do |f| %>
             <div class="form-group">
@@ -17,8 +17,9 @@
               <%= f.email_field :email, autofocus: true, class: 'form-control' %>
             </div>
 
-            <%= f.submit t('.send_me_reset_password_instructions', default: 'Send me reset password instructions'), class: 'btn btn-primary' %>
+            <%= f.submit t('.Redefinir senha', default: 'Redefinir senha'), class: 'btn btn-primary' %>
             <% end %>
+            <br />
             <%= render 'devise/shared/links' %>
 
           </div>
