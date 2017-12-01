@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="form-group">
-    <label>Título da notícia:</label>
+    <label>Título da notícia:</label><br />
     <%= form.text_field :titulo, id: :info_titulo %>
     <small class="form-text text-muted">Digite o título da notícia.</small>
   </div>
 
   <div class="form-group">
-    <label>Texto:</label>
+    <label>Texto:</label><br />
     <%= form.text_area :texto, id: :info_texto %>
     <small class="form-text text-muted">Faça o texto da notícia.</small>
   </div>
 
   <div class="form-group">
-    <label>Imagem:</label>
+    <label>Imagem:</label><br />
     <%= form.file_field :image %>
     <small class="form-text text-muted">Insira a imagem para a notícia.</small>
   </div>
 
 
   <div class="actions">
-    <%= form.submit :Submit, class:'btn planob-button-submit' %>
+    <%= form.submit :Enviar, class:'btn btn-primary' %>
   </div>
 
 <% end %>

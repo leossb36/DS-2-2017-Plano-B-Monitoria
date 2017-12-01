@@ -13,6 +13,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-bootstrap-views'
 
 gem "font-awesome-rails"
 

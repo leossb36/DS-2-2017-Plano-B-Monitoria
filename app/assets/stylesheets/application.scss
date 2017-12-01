@@ -74,7 +74,8 @@ body {
   border: 0;
 }
 #navbartext {
-  padding-top: 12%;
+  padding-top: 8%;
+  padding-left: 20%;
 }
 
 #backStyle {
@@ -88,7 +89,14 @@ body {
   font-size: 2em;
   margin: 0.1em;
 }
+#servicesButton2{
+  min-width:15em;
+  min-height:1em;
+  font-size:1em;
+  margin: 0.1em;
+  float: left;
 
+}
 .container-fluid{
   margin-top: 3%;
 }
@@ -97,7 +105,6 @@ body {
   background-color: #4D62A0;
   align-self: center;
   margin: 0.5em 0;
-  border-radius: 2em;
   padding: 0.5em 2em;
   cursor: pointer;
   border-width: 0;
@@ -139,4 +146,32 @@ body {
 
 .planob-button-destroy:enabled:hover {
   background-color: #BC2525;
+}
+
+//////*About us css*/////////
+
+.card{
+  height: 600;
+}
+#whoAreUs{
+
+  height: 60px;
+  background: #EEEEEE;
+}
+#whoAreUsText{
+  line-height: 10px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#Description{
+  text-align: left;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  font-size: 18px;
+  font-family: arial;
+
+}
+#corpo{
+  height: 350px;
 }

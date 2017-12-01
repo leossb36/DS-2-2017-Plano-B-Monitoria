@@ -4,33 +4,38 @@
     <div class="mx-auto my-auto text-center col-md-6">
       <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
         <div class="x_panel slide-in-blurred-top">
-          <div class="card-header">
-            <h1 style="font-size:150%"><%= @servico.nome %></h1>
+          <div class="card-header" style="background-color: #5fbb4e">
+            <h1 style="font-size:150%; color: white;"><%= @servico.nome %></h1>
           </div>
           <div class="card-body" align="center">
             <h3><strong>Descrição</strong></h3>
             <%= @servico.descricao %>
           </div>
           <div class="row justify-content-center">
-            <div class="col-md-6" > 
+            <div class="col-md-6" >
               <div class="card" align="center">
                 <p>
-                  <h3><strong>Valor</strong></h3>
-                  <h1><p><strong> R$ <%= @servico.preco %></strong></p></h1>
+                  <h5><strong>Investimento:</strong></h5>
+                  <h1><strong> R$ <%= @servico.preco %></strong></h1>
+                  <small>+ Taxa de locomoção</small>
                 </p>
               </div>
             </div>
           </div>
-          <div class ="row justify-content-around">
-            <div class="col-4">
-              <td><%= button_to 'Edit', edit_servico_path(@servico), method: :get, class:'btn planob-button-edit' %></td>
+          <% if current_user.blank? %>
+          <p> </p>
+          <% elsif current_user.is_admin %>
+          <div class ="row justify-content-around" style="margin-top: 5%; margin-bottom: 3%;">
+            <div class="col-3">
+              <td><%= button_to 'Editar', edit_servico_path(@servico), method: :get, class:'btn btn-secundary' %></td>
             </div>
-            <div class="col-md-4" align="center">
-              <td><%= button_to 'Destroy', @servico, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn planob-button-destroy', id: 'backButton' %></td>
+            <div class="col-md-3" align="center">
+              <td><%= button_to 'Excluir', @servico, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger', id: 'backButton' %></td>
             </div>
-            <div class="col-md-4" align="center">
-              <td><%= button_to 'Back', servicos_path, method: :get, class: 'btn planob-button-back', id: 'backButton' %></td>
+            <div class="col-md-3" align="center">
+              <td><%= button_to 'Voltar', servicos_path, method: :get, class: 'btn btn-success', id: 'backButton' %></td>
             </div>
+          <% end %>
           </div>
         </div>
       </div>

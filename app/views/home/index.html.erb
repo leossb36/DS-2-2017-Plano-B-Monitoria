@@ -1,9 +1,9 @@
 <body>
   <div class = "container-fluid scroll">
-    <div class = "row h-150" id ="no_margin">
-      <div class = "col-md-10 ">
+    <div class = "row h-150 justify-content-center" id ="no_margin">
+      <div class = "col-md-12">
         <div class="container">
-          <div class="row" id="carouselPadding">
+          <div class="row justify-content-center" id="carouselPadding">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -12,13 +12,19 @@
               </ol>
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                  <img class="d-block img-fluid" src="../assets/planob_parallax.jpg" alt="First slide">
+                  <a href="/infos/4">
+                    <img class="d-block img-fluid" src="../assets/first_slide.jpg" alt="First slide">
+                  </a>
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block img-fluid" src="../assets/planob_parallax.jpg" alt="Second slide">
+                  <a href="/infos/5">
+                    <img class="d-block img-fluid" src="../assets/second_slide.jpg" alt="Second slide">
+                  </a>
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block img-fluid" src="../assets/planob_parallax.jpg" alt="Third slide">
+                  <a href="/infos/6">
+                    <img class="d-block img-fluid" src="../assets/third_slide.jpg" alt="Third slide">
+                  </a>
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -35,15 +41,26 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row mt-5">
-      <div class="mx-auto my-auto text-center">
-        <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
-          <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white;">
-            <p> aojsdaoushf9a whfoafouaheofhweifubsa[hsabf uwhfuioh efuwef uowaehf iwef qwiuehfi wefhwefu</p>
+
+
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="col-md-6 text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%; ">Serviços</h1>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white;margin-bottom: 5%;">
+          <div style="padding-left: 11%;padding-top: 3%;margin-bottom: 5%">
+            <% @servicos.each do |servico| %>
+              <tr>
+                  <td><%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton2'%></td>
+              </tr>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </body>
