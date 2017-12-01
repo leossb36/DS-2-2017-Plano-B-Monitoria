@@ -40,7 +40,11 @@
       <div class="mx-auto my-auto text-center">
         <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
           <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white;">
-            <p> aojsdaoushf9a whfoafouaheofhweifubsa[hsabf uwhfuioh efuwef uowaehf iwef qwiuehfi wefhwefu</p>
+            <div class="x_panel slide-in-blurred-top" style="background-color: white">
+              <% @servicos.each do |servico| %>
+              <%= servico.nome %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
