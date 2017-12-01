@@ -11,7 +11,7 @@
             <div class="card-header">
               <h1 style="font-size:150%;">Entrar</h1>
             </div>
-            <div class="x_panel slide-in-blurred-top" style="background-color: white">
+            <div class="x_panel slide-in-blurred-top" style="background-color: white" id="backStyle">
                 <div class="form-group">
                   <%= f.label :email %>
                   <%= f.email_field :email, autofocus: true, class: 'form-control' %>
@@ -29,6 +29,8 @@
                 <% end %>
                 <%= f.submit  t('.sign_in', default: 'Sign in'), class: 'btn btn-primary' %>
                 <% end %>
+                <br />
+                <br />
                 <%= render 'devise/shared/links' %>
             </div>
           </div>

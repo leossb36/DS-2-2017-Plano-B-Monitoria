@@ -31,19 +31,23 @@
               </button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact-me"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+              <a class="nav-link" href="/contacts"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
                 Fale Conosco
               </button></a>
             </li>
             <li class="nav-item">
               <% if user_signed_in? %>
               <span class="navbar-text" id = "navbartext">
-                Bem vindo(a) <%= current_user.email %>
+                Bem vindo(a) <strong><%= current_user.email %></strong>
               </span>
-              <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
+            </li>
+            <li>
+              <div style="margin-top: 20px;">
+                <%= link_to "Sair", destroy_user_session_path, class: 'btn btn-success', :method => 'delete' %>
+              </div>
               <% else %>
-              <a class="nav-link" href="/users/sign_up"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
-                Cadastre-se
+              <a class="nav-link" href="/users/sign_in"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu" style="margin-left:200px;">
+                Login
               </button></a>
               <% end %>
             </li>

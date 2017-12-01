@@ -1,5 +1,5 @@
 <%= bootstrap_devise_error_messages! %>
-<div class="panel panel-default devise-bs">  
+<div class="panel panel-default devise-bs">
   <div class="container-fluid">
     <div class="row mt-10">
       <div class="mx-auto my-auto text-center">
@@ -7,7 +7,7 @@
           <div class="card-header">
             <h1 style="font-size:150%;">Cadastro</h1>
           </div>
-          <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <div class="x_panel slide-in-blurred-top" id="backStyle" style="background-color: white">
             <div class="panel-body">
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form' }) do |f| %>
               <div class="form-group">
@@ -24,6 +24,8 @@
               </div>
               <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
               <% end %>
+              <br />
+              <br />
               <%= render 'devise/shared/links' %>
             </div>
           </div>

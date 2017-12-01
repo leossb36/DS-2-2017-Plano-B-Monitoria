@@ -20,10 +20,10 @@
      params[:cidade]), {}, {:id=>"cidade_id"} %>
   </div>
 
-  <div class="field">
+  <div class="field" style="margin-bottom: 5%;">
     <%= form.label :nome_do_serviço %>
     <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
   </div>
 
-  <%= form.submit 'Criar Orçamento', class:'btn planob-button-submit' %>
+  <%= form.submit 'Criar Orçamento', class:'btn btn-success' %>
 <% end %>

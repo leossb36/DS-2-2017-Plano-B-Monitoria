@@ -7,16 +7,18 @@
         <div class="card-header">
           <h1 style="font-size:150%; ">Serviços</h1>
         </div>
+        
         <div class="x_panel slide-in-blurred-top" style="background-color: white">
-          <div id="backServices">
+          <div id="backServices" style="margin: 2%;">
             <% @servicos.each do |servico| %>
               <%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton' %>
             <% end %>
           </div>
-          <div id="bottomButton">
-            <%= button_to 'Criar Serviço', new_servico_path, method: :get, class: 'planob-button-submit', id: ''%>
+          <div id="bottomButton" style="margin-bottom:2%; margin-top:5%;">
+            <%= button_to 'Criar Serviço', new_servico_path, method: :get, class: 'btn btn-primary', id: ''%>
           </div>
         </div>
+
       </div>
     </div>
   </div>
