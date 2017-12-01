@@ -5,16 +5,16 @@
         <div class="card-header">
           <h3><strong>Orçamento</strong></h3>
         </div>
-        <div class="x_panel slide-in-blurred-top" style="background-color: white">  
-          <div id="backServices">
+        <div class="x_panel slide-in-blurred-top" style="background-color: white">
+          <div id="backServices" style="margin: 2%;">
             <% @orcamentos.each do |orcamento| %>
               <%= button_to orcamento.cidade, orcamento, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton' %>
             <% end %>
           </div>
         </div>
-        <div class="row justify-content-center" id="buttonEdit">
+        <div class="row justify-content-center" id="buttonEdit" style="margin-bottom:2%; margin-top:5%;">
           <div class="col-md-4">
-            <%= button_to 'Novo Orçamento', new_orcamento_path, method: :get, class:'btn planob-button-submit' %>
+            <%= button_to 'Novo Orçamento', new_orcamento_path, method: :get, class:'btn btn-primary' %>
           </div>
         </div>
       </div>
@@ -54,6 +54,3 @@
 
 <br>
  -->
-
-
-
