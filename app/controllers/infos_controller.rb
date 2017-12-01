@@ -72,7 +72,7 @@ class InfosController < ApplicationController
     def set_info
       @info = Info.find(params[:id])
     end
-    
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def info_params
