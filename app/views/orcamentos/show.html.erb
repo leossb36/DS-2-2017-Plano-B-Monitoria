@@ -12,7 +12,19 @@
           <div class="card" style="padding: 5%;">
             <p><strong>Cidade:</strong> <%= @orcamento.cidade %></p>
             <p><strong>Serviço:</strong> <%= @orcamento.servico.nome %></p>
-            <p><strong>Preço:</strong> <%= @orcamento.preco %></p>
+
+             <div class="row justify-content-center">
+            <div class="col-md-6" >
+              <div class="card" align="center">
+                <p>
+                  <h5><strong>Investimento:</strong></h5>
+                  <h1><strong>R$:</strong> <%= @orcamento.preco %></h1>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+
           </div>
           <div class="row justify-content-center" style="margin-top: 3%; margin-bottom: 3%;">
             <div class="col-md-4">
