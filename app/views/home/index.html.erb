@@ -35,19 +35,28 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row mt-5">
-      <div class="mx-auto my-auto text-center">
-        <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
-          <div id="list" class="x_panel slide-in-blurred-top" style="background-color: white;">
-            <div class="x_panel slide-in-blurred-top" style="background-color: white">
-              <% @servicos.each do |servico| %>
-              <%= servico.nome %>
-              <% end %>
-            </div>
+
+
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="col-md-6 text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%; ">Serviços</h1>
+        </div>
+
+        <div class="x_panel slide-in-blurred-top" style="background-color: white;margin-bottom: 5%;">
+          <div  id="backServices" style="padding:10%;padding-left: 12.5%;padding-top: 3%;margin-bottom: 5%">
+            <% @servicos.each do |servico| %>
+              <tr>
+                  <td><%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton2'%></td>
+              </tr>
+            <% end %>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+</div>
 </body>
