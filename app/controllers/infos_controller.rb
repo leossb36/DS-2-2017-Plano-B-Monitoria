@@ -24,6 +24,7 @@ class InfosController < ApplicationController
 
   # GET /infos/1/edit
   def edit
+    @info = Info.find(params[:id])
   end
 
   # POST /infos
