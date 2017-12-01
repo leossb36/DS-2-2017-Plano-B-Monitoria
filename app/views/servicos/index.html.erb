@@ -14,7 +14,9 @@
               <%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton' %>
             <% end %>
           </div>
-          <% if current_user.is_admin %>
+          <%if current_user.blank? %>
+          <p> </p>
+          <% elsif current_user.is_admin? %>
           <div id="bottomButton" style="margin-bottom:2%; margin-top:5%;">
             <%= button_to 'Criar Serviço', new_servico_path, method: :get, class: 'btn btn-primary', id: ''%>
           </div>
