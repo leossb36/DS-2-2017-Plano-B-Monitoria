@@ -12,26 +12,25 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6" >
-              <!-- <div class="card" align="center">
-                <p>
-                  <h3><strong>Imagem da notícia</strong></h3>
+              <div class="card">
                   <p>
                     <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
                   </p>
-                </p>
-              </div> -->
+              </div>
             </div>
           </div>
-          <% if current_user.is_admin? %>
-          <div class ="row justify-content-around">
+          <% if current_user.blank? || current_user.present? %>
+          <p> </p>
+          <% elsif current_user.is_admin? %>
+          <div class ="row justify-content-around" style="padding-bottom: 30px;">
             <div class="col-4">
-              <td><%= button_to 'Edit', edit_info_path(@info), method: :get, class:'btn planob-button-edit' %></td>
+              <td><%= button_to 'Editar', edit_info_path(@info), method: :get, class:'btn btn-info' %></td>
             </div>
             <div class="col-md-4" align="center">
-              <td><%= button_to 'Destroy', @info, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn planob-button-destroy', id: 'backButton' %></td>
+              <td><%= button_to 'Excluir', @info, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', id: 'backButton' %></td>
             </div>
             <div class="col-md-4" align="center">
-              <td><%= button_to 'Back', infos_path, method: :get, class: 'btn planob-button-back', id: 'backButton' %></td>
+              <td><%= button_to 'Voltar', infos_path, method: :get, class: 'btn btn-secundary', id: 'backButton' %></td>
             </div>
           </div>
           <% end %>

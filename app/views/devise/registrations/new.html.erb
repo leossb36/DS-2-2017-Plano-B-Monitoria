@@ -15,14 +15,14 @@
                 <%= f.email_field :email, autofocus: true, class: 'form-control' %>
               </div>
               <div class="form-group">
-                <%= f.label :password %>
+                <%= f.label :senha %>
                 <%= f.password_field :password, class: 'form-control' %>
               </div>
               <div class="form-group">
-                <%= f.label :password_confirmation %>
+                <%= f.label :Confirmação_de_senha %>
                 <%= f.password_field :password_confirmation, class: 'form-control' %>
               </div>
-              <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
+              <%= f.submit t('.cadastrar', default: 'Cadastrar'), class: 'btn btn-primary' %>
               <% end %>
               <br />
               <br />

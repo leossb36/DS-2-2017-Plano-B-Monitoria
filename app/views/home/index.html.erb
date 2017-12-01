@@ -12,17 +12,17 @@
               </ol>
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                  <a href="/infos/1">
+                  <a href="/infos/4">
                     <img class="d-block img-fluid" src="../assets/first_slide.jpg" alt="First slide">
                   </a>
                 </div>
                 <div class="carousel-item">
-                  <a href="/infos/2">
+                  <a href="/infos/5">
                     <img class="d-block img-fluid" src="../assets/second_slide.jpg" alt="Second slide">
                   </a>
                 </div>
                 <div class="carousel-item">
-                  <a href="/infos/3">
+                  <a href="/infos/6">
                     <img class="d-block img-fluid" src="../assets/third_slide.jpg" alt="Third slide">
                   </a>
                 </div>
@@ -51,7 +51,7 @@
           <h1 style="font-size:150%; ">Serviços</h1>
         </div>
         <div class="x_panel slide-in-blurred-top" style="background-color: white;margin-bottom: 5%;">
-          <div  id="backServices" style="padding-left: 11%;padding-top: 3%;margin-bottom: 5%">
+          <div style="padding-left: 11%;padding-top: 3%;margin-bottom: 5%">
             <% @servicos.each do |servico| %>
               <tr>
                   <td><%= button_to servico.nome, servico, method: :get, class: 'btn btn-success btn-lg', id: 'servicesButton2'%></td>
