@@ -13,14 +13,17 @@
 
   <div class="field">
     <%= form.label :cidade %>
-    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Taguatinga','Taguatinga'],
-    ['Santa Maria','Santa Maria']], params[:cidade]), {}, {:id=>"cidade_id"} %>
+    <%= form.select :cidade, options_for_select([['Gama','Gama'],['Santa Maria','Santa Maria'],
+    ['Taguatinga','Taguatinga'], ['Ceilândia','Ceilândia'],['Samambaia','Samambaia'],
+    ['Águas Claras','Águas Claras'], ['Asa Norte','Asa Norte'], ['Asa Sul','Asa Sul'],
+    ['Sudoeste','Sudoeste']],
+     params[:cidade]), {}, {:id=>"cidade_id"} %>
   </div>
 
-  <div class="field">
+  <div class="field" style="margin-bottom: 5%;">
     <%= form.label :nome_do_serviço %>
     <%= form.collection_select(:servico_id, Servico.all, :id, :nome) %>
   </div>
 
-  <%= form.submit 'Criar Orçamento', class:'btn planob-button-submit' %>
+  <%= form.submit 'Criar Orçamento', class:'btn btn-success' %>
 <% end %>

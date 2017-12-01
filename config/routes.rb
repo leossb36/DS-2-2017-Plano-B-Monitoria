@@ -7,10 +7,15 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
 
+  resources :about
   resources :infos
   devise_for :users
-  get 'contact-me', to: 'messages#new', as: 'new_message'
-    post 'contact-me', to: 'messages#create', as: 'create_message'
+ 
+
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+
 
   devise_scope :user do
     get 'users/sign_out' => "devise/sessions#destroy"

@@ -26,24 +26,45 @@
               </button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+              <a class="nav-link" href="/about"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
                 Quem Somos
               </button></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact-me"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
-                Fale Conosco
-              </button></a>
-            </li>
+            <% if current_user.present? && current_user.is_admin==false %>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacts"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                  Fale Conosco
+                </button></a>
+              </li>
+            <% end %>
+            <% if current_user.blank? %>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacts"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                  Fale Conosco
+                </button></a>
+              </li>
+            <% elsif current_user.is_admin? %>
+              <li class="nav-item">
+                <a class="nav-link" href="/infos"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
+                  Informações
+                </button></a>
+              </li>
+            <% else %>
+
+            <% end %>
             <li class="nav-item">
               <% if user_signed_in? %>
               <span class="navbar-text" id = "navbartext">
-                Bem vindo(a) <%= current_user.email %>
+                Bem vindo(a) <strong><%= current_user.email %></strong>
               </span>
-              <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
+            </li>
+            <li>
+              <div style="margin-top: 20px;">
+                <%= link_to "Sair", destroy_user_session_path, class: 'btn btn-success', :method => 'delete' %>
+              </div>
               <% else %>
-              <a class="nav-link" href="/users/sign_up"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu">
-                Cadastre-se
+              <a class="nav-link" href="/users/sign_in"><button class = "btn btn-outline-success card-body" type = "submit" id = "buttonsMenu" style="margin-left:200px;">
+                Login
               </button></a>
               <% end %>
             </li>

@@ -1,0 +1,30 @@
+<%= bootstrap_devise_error_messages! %>
+
+
+
+<div class="container-fluid">
+  <div class="row mt-10">
+    <div class="mx-auto my-auto text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%;">Esqueceu sua senha?</h1>
+        </div>
+        <div class="x_panel slide-in-blurred-top" style="background-color: white" id="backStyle">
+          <div class="panel-body">
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, role: "form" }) do |f| %>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+            </div>
+
+            <%= f.submit t('.Redefinir senha', default: 'Redefinir senha'), class: 'btn btn-primary' %>
+            <% end %>
+            <br />
+            <%= render 'devise/shared/links' %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,27 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row mt-10 justify-content-center">
+    <div class="col-md-6 text-center">
+      <div class="card bg-light border-secondary mb-4 z-depth-2 slide-in-blurred-top">
+        <div class="card-header">
+          <h1 style="font-size:150%; ">Informações</h1>
+        </div>
+          <table id="backStyle">
+            <thead>
+              <tr>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
 
-<h1>Infos</h1>
+            <tbody>
+              <% @infos.each do |info| %>
+                <tr>
+                  <td><strong style="margin-right: 50px; margin-left:30px"><%= info.titulo %></strong></td>
+                  <td><%= button_to 'Visualizar', info, method: :get, class: 'btn btn-info' %></td>
+                  <td><%= button_to 'Editar', edit_info_path(info), method: :get, class: 'btn btn-secundary' %></td>
 
-<table>
-  <thead>
-    <tr>
-      <th>Texto</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                  <td><%= button_to 'Excluir', info, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <% if current_user.blank?%>
+          <p> </p>
 
-  <tbody>
-    <% @infos.each do |info| %>
-      <tr>
-        <td><%= info.texto %></td>
-        <td><%= link_to 'Show', info %></td>
-        <td><%= link_to 'Edit', edit_info_path(info) %></td>
-        <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <% elsif current_user.is_admin?%>
+          <div id="bottomButton" style="margin-bottom:2%; margin-top:5%;">
+            <%= button_to 'Nova Info', new_info_path, method: :get, class: 'btn btn-primary', id: ''%>
+          </div>
+          <% end %>
+        </div>
 
-<br>
-
-<%= link_to 'New Info', new_info_path %>
+      </div>
+    </div>
+  </div>
+</div>
