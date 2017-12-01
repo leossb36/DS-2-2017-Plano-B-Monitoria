@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
   <div class="row mt-10 justify-content-center">
     <div class="mx-auto my-auto text-center col-md-6">
@@ -7,21 +8,21 @@
             <h1 style="font-size:150%"><%= @info.titulo %></h1>
           </div>
           <div class="card-body" align="center">
-            <h3><strong>Texto da notícia</strong></h3>
             <%= @info.texto %>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6" >
-              <div class="card" align="center">
+              <!-- <div class="card" align="center">
                 <p>
                   <h3><strong>Imagem da notícia</strong></h3>
                   <p>
                     <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
                   </p>
                 </p>
-              </div>
+              </div> -->
             </div>
           </div>
+          <% if current_user.is_admin? %>
           <div class ="row justify-content-around">
             <div class="col-4">
               <td><%= button_to 'Edit', edit_servico_path(@info), method: :get, class:'btn planob-button-edit' %></td>
@@ -33,37 +34,9 @@
               <td><%= button_to 'Back', infos_path, method: :get, class: 'btn planob-button-back', id: 'backButton' %></td>
             </div>
           </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-<!-- 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Título da notícia:</strong>
-  <%= @info.titulo %>
-</p>
-
-<p>
-  <strong>Texto:</strong>
-  <%= @info.texto %>
-</p>
-
-<p>
-  <strong>Imagem:</strong>
-  <div id="image"<dd><%= image_tag @info.image.url %></dd></div>
-</p>
-
-<%= link_to 'Edit', edit_info_path(@info) %> |
-<%= link_to 'Back', infos_path %> -->

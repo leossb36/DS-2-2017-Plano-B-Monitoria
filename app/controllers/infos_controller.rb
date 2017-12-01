@@ -1,8 +1,10 @@
 class InfosController < ApplicationController
   # before_action :authenticate_user!, :except => [:index]
-  before_action :notice=> 'you must sign in first!' do
+  before_action :set_info, only: [:show, :edit, :update, :destroy]
+  before_action :except =>[:show] do
     redirect_to root_path unless current_user && current_user.is_admin?
   end
+
 
   # GET /infos
   # GET /infos.json
@@ -70,6 +72,7 @@ class InfosController < ApplicationController
     def set_info
       @info = Info.find(params[:id])
     end
+    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def info_params
