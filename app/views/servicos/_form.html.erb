@@ -12,21 +12,18 @@
   <% end %>
 
   <div class="form-group">
-    <label>Nome:</label>
-    <%= form.text_field :nome, id: :servico_nome %>
-    <small class="form-text text-muted">Escolha um nome para esse serviço.</small>
+    <label>Nome:</label> <br />
+    <%= form.text_field :nome, id: :servico_nome,placeholder:"Escolha um nome para esse serviço" %>
   </div>
 
-  <div class="form-group">
-    <label>Descrição:</label>
-    <%= form.text_area :descricao, id: :servico_descricao %>
-    <small class="form-text text-muted">Descreva esse serviço.</small>
+  <div class="form-group"> 
+    <label>Descrição:</label> <br />
+    <%= form.text_area :descricao, id: :servico_descricao,placeholder:"Descreva esse serviço" %>
   </div>
 
-  <div class="form-group">
-    <label>Preço:</label>
-    <%= form.text_field :preco, id: :servico_preco %>
-    <small class="form-text text-muted">Defina um preço para esse serviço.</small>
+  <div class="form-group"> 
+    <label>Preço:</label> <br />
+    <%= form.text_field :preco, id: :servico_preco,placeholder:"Defina um preço para esse serviço" %>
   </div>
 
 <%= form.submit :Enviar, class:'btn btn-success' %>
